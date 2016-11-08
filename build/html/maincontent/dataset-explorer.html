@@ -1,0 +1,2031 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Dataset Explorer &mdash; tranSMART User Guide 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="tranSMART User Guide 0.1 documentation" href="../index.html" />
+    <link rel="next" title="Gene Signatures and Gene Lists" href="gene-signatures.html" />
+    <link rel="prev" title="Search Tool" href="search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="dataset-explorer">
+<h1>Dataset Explorer<a class="headerlink" href="#dataset-explorer" title="Permalink to this headline">¶</a></h1>
+<p>Dataset Explorer lets you compare data generated for test subjects in
+two different study groups, based on criteria and points of comparison
+that you specify. Dataset Explorer is useful to help you test a
+hypothesis that involves the criteria and points of comparison that you
+select.</p>
+<div class="section" id="overview-of-the-ui">
+<h2>Overview of the UI<a class="headerlink" href="#overview-of-the-ui" title="Permalink to this headline">¶</a></h2>
+<p>The figure below shows the Dataset Explorer interface. It is divided
+into two panes:</p>
+<p><strong>Left pane</strong></p>
+<ul class="simple">
+<li>Lets you select the study of interest.</li>
+<li>Provides a navigation tree where you select the criteria for
+membership in the study groups and the points of comparison between
+the study groups.</li>
+</ul>
+<p><a href="#id1"><span class="problematic" id="id2">**</span></a>Right pane **</p>
+<ul class="simple">
+<li>Lets you define the criteria that test subjects must satisfy to
+become members of one of the two groups being compared. Each of these
+groups is called a <em>subset</em> because it typically contains only some
+of the subjects in the actual study group involved in the study.</li>
+</ul>
+<p>You define the criteria for the subsets in the subset definition boxes
+shown below. Subjects who do not satisfy the criteria you define are
+excluded from the subsets.</p>
+<ul>
+<li><p class="first">Provides summary data about the subjects being compared, and several
+different views of the comparison data.</p>
+<p><a href="#id5"><span class="problematic" id="id6">|image55|</span></a></p>
+</li>
+</ul>
+<p>The following table describes the buttons and tabs in the right pane of
+Dataset Explorer:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="16%" />
+<col width="84%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Button or Tab</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Generate Summary Statistics button</td>
+<td><p class="first">Displays tables and charts that describe demographic information about the subjects in the subsets, and also analyses of criteria included in the subset definitions.</p>
+<p class="last">The tables and charts are displayed in the Results/Analysis view.</p>
+</td>
+</tr>
+<tr class="row-odd"><td>Summary button</td>
+<td>Displays a summary of the query criteria you specified. Dataset Explorer uses these criteria to select the subjects for the subsets.</td>
+</tr>
+<tr class="row-even"><td>Clear button</td>
+<td>Clears all the criteria in the subset definition boxes.</td>
+</tr>
+<tr class="row-odd"><td>Save button</td>
+<td><p class="first">Saves the criteria definition. This allows you to re-generate the comparison at a later time without having to reconstruct the criteria that select the subjects for the subsets.</p>
+<p class="last">For more information, see <em>Saving Comparison Definitions</em> .</p>
+</td>
+</tr>
+<tr class="row-even"><td>Export button</td>
+<td>Exports summary statistics data or expression data to Microsoft Excel.</td>
+</tr>
+<tr class="row-odd"><td>Print button</td>
+<td>Prints the tables and charts in the Results/Analysis view.</td>
+</tr>
+<tr class="row-even"><td>Comparison tab</td>
+<td>Removes the currently displayed view (that is, the Results/Analysis view, or Grid view) and re-displays the subset definition boxes. This allows you to further refine the subjects for the comparison.</td>
+</tr>
+<tr class="row-odd"><td>Advanced Workflow tab</td>
+<td>Displays advanced analyses and visualizations that you can perform on data.</td>
+</tr>
+<tr class="row-even"><td>Results/Analysis tab</td>
+<td>Displays tables and charts containing comparison and analysis data generated from the “Summary Statistics” workflow.</td>
+</tr>
+<tr class="row-odd"><td>Grid View tab</td>
+<td>Displays the comparison and analysis data in grid format.</td>
+</tr>
+<tr class="row-even"><td>Jobs tab</td>
+<td>Displays previously run analyses.</td>
+</tr>
+<tr class="row-odd"><td>Data Export tab</td>
+<td>Allows you to select data to export for further analysis in an external tool.</td>
+</tr>
+<tr class="row-even"><td>Export Jobs tab</td>
+<td>Displays previously exported jobs.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="using-dataset-explorer">
+<h2>Using Dataset Explorer<a class="headerlink" href="#using-dataset-explorer" title="Permalink to this headline">¶</a></h2>
+<p>Four basic tasks are involved in using Dataset Explorer:</p>
+<ul class="simple">
+<li>Select the study (clinical trial or experiment) to use in the
+comparison.</li>
+<li>Specify the criteria for membership in the two study groups. Note
+some analyses only allow for the specification of one group at this
+time.</li>
+<li>Generate summary statistics for the two study groups.</li>
+<li>Specify the points of comparison to apply to the study groups.</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">You may see the notations <strong>NA</strong> and <strong>Unknown</strong> in the study data. <strong>NA</strong> indicates not applicable, and <strong>Unknown</strong> indicates not available.</p>
+</div>
+<div class="section" id="public-and-private-studies">
+<h3>Public and Private Studies<a class="headerlink" href="#public-and-private-studies" title="Permalink to this headline">¶</a></h3>
+<p>Dataset Explorer studies can be either public or private. Public studies
+can be found both in the <strong>Public Studies</strong> folder of the Dataset
+Explorer navigation tree, as well as in the research-specific folders.</p>
+<p>You can perform all the operations described in this chapter on public
+studies. No special privileges are required.</p>
+<p>To perform operations described in this chapter on a private study, a
+tranSMART Administrator must assign you access rights to the study.
+Access rights are based on the following access levels:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="9%" />
+<col width="91%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Access Level</th>
+<th class="head">Privileges</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>VIEW</td>
+<td>Define the criteria for the study groups to be compared, generate summary statistics for the study groups, and specify points of comparison for the study groups.</td>
+</tr>
+<tr class="row-odd"><td>EXPORT</td>
+<td>All privileges of the VIEW access level, plus the ability to export comparison data or expression data to a Microsoft Excel spreadsheet.</td>
+</tr>
+<tr class="row-even"><td>OWN</td>
+<td><p class="first">All VIEW and EXPORT privileges.</p>
+<p class="last">This access level can only be assigned to the owner of the study.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>If you do not have access rights to the study you want (that is, if the
+study name is grayed out), contact a tranSMART Administrator. The
+administrator will contact the study owner to find out if you should be
+granted VIEW access, EXPORT access, or no access.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Even if you have no access rights to a private study, you can read a description of the study. For information, see <em>Viewing a Study</em> .</p>
+</div>
+</div>
+<div class="section" id="selecting-the-study">
+<h3>Selecting the Study<a class="headerlink" href="#selecting-the-study" title="Permalink to this headline">¶</a></h3>
+<p>You select the study in the left pane of Dataset Explorer. You have
+several ways to select the study, based on the tab you choose – Search
+Terms or Navigate Terms.</p>
+<div class="section" id="search-terms-tab">
+<h4>Search Terms Tab<a class="headerlink" href="#search-terms-tab" title="Permalink to this headline">¶</a></h4>
+<p>Use this tab to search for studies using one or a combination of the
+following fields:</p>
+<ul class="simple">
+<li><strong>Search</strong> field. It lets you specify part or all of a term from a
+study that is stored in the tranSMART database. Search terms may
+include part or all of a study name, the text in a branch of the
+Dataset Explorer navigation tree, or some attribute of a study, such
+as a disease or an area of clinical interest.</li>
+</ul>
+<p>Example:</p>
+<p><a href="#id7"><span class="problematic" id="id8">|image58|</span></a></p>
+<p>If you want to base your search on a study name, note the following
+naming conventions for Public Studies in Dataset Explorer:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="8%" />
+<col width="92%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Study Type</th>
+<th class="head">Naming Convention</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Public Studies</td>
+<td><p class="first">Name segments in the following typical format:</p>
+<p><em>Condition_StudyFirstAuthor</em>_<em>GEOid</em></p>
+<p>Example: ProstateCancer_Ambs_GSE6956</p>
+<p class="last">If you prefer, you can rearrange the order of the segments (for example, author segment first). The name structure is determined by the ETL process that loads the data into the i2b2 database.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="selecting-and-opening-a-study-in-a-search-result">
+<h5>Selecting and Opening a Study in a Search Result<a class="headerlink" href="#selecting-and-opening-a-study-in-a-search-result" title="Permalink to this headline">¶</a></h5>
+<p>A search result may include multiple entries. Further, an entry may not
+indicate the study it is from. To see the name of the study that an
+entry represents, hover the mouse pointer over the entry – for example:</p>
+<p><a href="#id9"><span class="problematic" id="id10">|image59|</span></a></p>
+<p>If you want more information about the study represented by an entry,
+right-click the entry, then click <strong>Show</strong> <strong>Definition</strong> to open the
+details box for the study:</p>
+<p><a href="#id11"><span class="problematic" id="id12">|image60|</span></a></p>
+<p>To open a study from an entry in a search result, right-click the entry,
+then click <strong>Show</strong> <strong>Node</strong>. The study appears in the Dataset Explorer
+navigation tree, where you can open any of the branches (nodes) in the
+study.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">You may need to scroll down slightly in the navigation tree to see the study.</p>
+</div>
+</div>
+</div>
+<div class="section" id="navigate-terms-tab">
+<h4>Navigate Terms Tab<a class="headerlink" href="#navigate-terms-tab" title="Permalink to this headline">¶</a></h4>
+<p>Use this tab to browse through all the experiments in the navigation
+tree to select and open the study you want.</p>
+<p>Studies that are grayed out are private studies that you are not
+authorized to access.</p>
+<p>To display the details box for a study, right-click the study name and
+click <strong>Show</strong> <strong>Definition</strong>. You can display the details box for a
+study whether or not the study is grayed out.</p>
+</div>
+<div class="section" id="branches-and-leaves-of-the-navigation-tree">
+<h4>Branches and Leaves of the Navigation Tree<a class="headerlink" href="#branches-and-leaves-of-the-navigation-tree" title="Permalink to this headline">¶</a></h4>
+<p>The Dataset Explorer navigation tree looks and works much likeyour
+operating system’s file explorer: it is a an expandable hierarchy of
+folders, sub-folders, and files. Dataset Explorer is a hierarchy of
+folders and sub-folders (the branches) and values (the leaves) that
+reflect aspects of the trial, such as research metrics, compounds used,
+and patient demographics.</p>
+<p>In Dataset Explorer, all levels of the tree, both branches and leaves,
+are referred to as nodes.</p>
+<p>The following figure shows typical top-level nodes of a study. Some
+studies may not require all of these nodes, and others may require
+additional nodes (such as Published Conclusions):</p>
+<p><a href="#id13"><span class="problematic" id="id14">|image62|</span></a></p>
+<p>The following table describes possible top-level nodes of a study:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="18%" />
+<col width="82%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Node</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Biomarker Data</td>
+<td>Measurements of biomarkers such as RBM antigens, gene expressions, antibodies and antigens in ELISA tests, and SNPs.</td>
+</tr>
+<tr class="row-odd"><td>Clinical Data</td>
+<td>Primary and secondary endpoints, and other measurements from the study.</td>
+</tr>
+<tr class="row-even"><td>Samples and Timepoints</td>
+<td>Tested samples (such as tissue or blood) and time periods when the samples were taken.</td>
+</tr>
+<tr class="row-odd"><td>Scheduled Visits</td>
+<td>Periodic stages of the trial during which patients are seen.</td>
+</tr>
+<tr class="row-even"><td>Design Factors</td>
+<td><p class="first">Compounds involved in the study, dosages, and regularity with which the compounds were administered.</p>
+<p class="last"><strong>Note:</strong> With clinical trials, this node is typically named Treatment Groups.</p>
+</td>
+</tr>
+<tr class="row-odd"><td>Sample Factors</td>
+<td>Patient information, such as demographics and medical history.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="populating-the-study-groups">
+<h3>Populating the Study Groups<a class="headerlink" href="#populating-the-study-groups" title="Permalink to this headline">¶</a></h3>
+<p>You populate the study groups by defining criteria that members of each
+group must satisfy. For example, members of study groups might be
+required to satisfy a weight or age requirement. Dataset Explorer lets
+you build a set of criteria for each study group that can be as simple
+or as complex as you need.</p>
+<p>The study groups you define are called <em>subsets</em>, because typically,
+after your criteria are applied, the members of a resulting study group
+are a subset of the full study group that participated in the study.</p>
+<div class="section" id="selecting-criteria-for-the-study-groups">
+<h4>Selecting Criteria for the Study Groups<a class="headerlink" href="#selecting-criteria-for-the-study-groups" title="Permalink to this headline">¶</a></h4>
+<p>You define the study groups by selecting criteria (called concepts) from
+the navigation tree and dragging them into the subset definition boxes.</p>
+<div class="section" id="visual-aids-to-help-you-select-the-criteria">
+<h5>Visual Aids to Help You Select the Criteria<a class="headerlink" href="#visual-aids-to-help-you-select-the-criteria" title="Permalink to this headline">¶</a></h5>
+<p>Each concept node in the navigation tree displays the following
+information about the concept:</p>
+<ul>
+<li><p class="first">The numbers in parentheses at each node of the tree indicate the
+number of subjects to whom that node applies. For example, in the
+figure below, there are a total of 327 subjects in the study.</p>
+</li>
+<li><p class="first">In tranSMART, data values are represented in one of three ways: by
+number, by text, or by high dimensional data (SNP, gene expression,
+etc.) stored as <em>arrays</em>.</p>
+<p>The three types of data values are described in the illustration
+below:</p>
+<p><a href="#id15"><span class="problematic" id="id16">|image63|</span></a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="specifying-a-numeric-value">
+<h4>Specifying a Numeric Value<a class="headerlink" href="#specifying-a-numeric-value" title="Permalink to this headline">¶</a></h4>
+<p>When you drag a numeric concept into a subset definition box, the Set
+Value dialog appears:</p>
+<p><a href="#id17"><span class="problematic" id="id18">|image64|</span></a></p>
+<p>Use the Set Value dialog to specify how you want to constrain the
+numeric values to use in the subset definition. To do so, first select
+one of the following choices:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Selection</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>No Value</td>
+<td><p class="first">Values are not constrained. All the numeric data associated with the concept are factored into the subset definition.</p>
+<p class="last">If you select <strong>No Value</strong>, no other information is required. Click <strong>OK</strong> to add the concept with all its associated numeric data to the subset.</p>
+</td>
+</tr>
+<tr class="row-odd"><td>By high/low flag</td>
+<td><p class="first">If the testing laboratory has grouped the numeric values into high/low/normal ranges, select the range to factor into the subset definition.</p>
+<p class="last">When you select <strong>By high/low flag</strong>, the <strong>Please select range</strong> field appears. Select the range you want and click <strong>OK</strong>.</p>
+</td>
+</tr>
+<tr class="row-even"><td>By numeric value</td>
+<td><p class="first">Values are constrained by an exact value or a range of values.</p>
+<p>After you select <strong>By numeric value</strong>:</p>
+<ul class="simple">
+<li>Select one of the following numeric operators in the <strong>Please select operator dropdown</strong>:</li>
+</ul>
+<p><a href="#id19"><span class="problematic" id="id20">|image65|</span></a></p>
+<ul class="simple">
+<li>In <strong>Please enter value</strong>, type the numeric value that the operator applies to.</li>
+</ul>
+<p>For example, to constrain the ages of subjects to 50 years or younger, select LESS THAN OR EQUAL TO(&lt;=) in the dropdown, then type 50 in the <strong>Please enter value</strong> field.</p>
+<ul class="simple">
+<li>Click <strong>OK.</strong></li>
+</ul>
+<p class="last">See the next section for information on viewing the numeric values associated with the concept and that you can select from.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">When finished defining the numeric constraint on the Set Value dialog, be sure to click <strong>OK</strong> and not press the <strong>Enter</strong> key. Pressing <strong>Enter</strong> will activate the subset button that has focus – the <strong>Exclude</strong> button in the example below:</p>
+</div>
+<p><a href="#id21"><span class="problematic" id="id22">|image67|</span></a></p>
+<div class="section" id="viewing-the-numeric-values-associated-with-a-concept">
+<h5>Viewing the Numeric Values Associated with a Concept<a class="headerlink" href="#viewing-the-numeric-values-associated-with-a-concept" title="Permalink to this headline">¶</a></h5>
+<p>Note the buttons <strong>Show Histogram</strong> and <strong>Show Histogram for subset</strong> in
+the Set Value dialog. The histograms show how the numeric values
+associated with the concept that you placed in the subset box are
+distributed among the subjects across both subsets, or in the particular
+subset you are currently defining, respectively.</p>
+<p>A histogram may be helpful in determining the number to set as the
+constraining factor for a concept. For example, suppose you drag a
+Weight concept into a subset box, then click <strong>Show Histogram for
+subset</strong>. In the following histogram of the weights of test subjects,
+the weights range from about 25 kg to just under 125 kg. The largest bin
+represents just under 50 subjects. You may want to use these weight
+parameters to help you determine the value to set for the weight
+concept.</p>
+<p><a href="#id23"><span class="problematic" id="id24">|image68|</span></a></p>
+<p>You can get more specific information about the number of subjects
+represented by a particular bin and the average of the values in the bin
+by hovering the mouse cursor over the bin you are interested in. For
+example, in the following figure, the largest bin represents 49 subjects
+with an average weight of 68.7 kg:</p>
+<p><a href="#id25"><span class="problematic" id="id26">|image69|</span></a></p>
+</div>
+</div>
+<div class="section" id="saving-comparison-definitions">
+<h4>Saving Comparison Definitions<a class="headerlink" href="#saving-comparison-definitions" title="Permalink to this headline">¶</a></h4>
+<p>You may save your search criteria in order to regenerate the comparison
+at a later time without having to redefine the subsets.</p>
+<ol class="arabic">
+<li><p class="first">To save search criteria:</p>
+</li>
+<li><p class="first">Run tranSMART, then click the <strong>Dataset Explorer</strong> tab.</p>
+</li>
+<li><p class="first">Select the study of interest.</p>
+</li>
+<li><p class="first">Define the cohorts whose data points will be represented.</p>
+</li>
+<li><p class="first">Click <strong>Save</strong>:</p>
+<blockquote>
+<div><p><a href="#id27"><span class="problematic" id="id28">|image70|</span></a></p>
+</div></blockquote>
+</li>
+<li><p class="first">Click <strong>Email this comparison</strong>:</p>
+<blockquote>
+<div><p><a href="#id29"><span class="problematic" id="id30">|image71|</span></a></p>
+</div></blockquote>
+</li>
+</ol>
+<p>Your email application will open with a link to the saved comparison.
+#. Send the email to yourself so that you can retrieve the comparison</p>
+<blockquote>
+<div>later. Optionally, send it to colleagues who might be interested in
+the comparison.</div></blockquote>
+<p>When you or someone else clicks the link in the email, Dataset Explorer
+opens with the subset boxes pre-defined.</p>
+</div>
+<div class="section" id="joining-multiple-criteria-for-a-subset-definition">
+<h4>Joining Multiple Criteria for a Subset Definition<a class="headerlink" href="#joining-multiple-criteria-for-a-subset-definition" title="Permalink to this headline">¶</a></h4>
+<p>Multiple criteria for a subset definition are joined by one of the
+following logical operators: AND, OR, or AND NOT.</p>
+<p>The rules for joining multiple criteria are as follows:</p>
+<ul class="simple">
+<li>Criteria in separate subset definition boxes are joined by an AND
+operator.</li>
+</ul>
+<p>For example, the following definition boxes select only male subjects,
+AND males whose weights are between 65 kg and 90 kg:</p>
+<p><a href="#id31"><span class="problematic" id="id32">|image72|</span></a></p>
+<ul class="simple">
+<li>Criteria within the same subset definition box are joined by an OR
+operator.</li>
+</ul>
+<p>For example, to use the extreme ends of the weight scale for your weight
+criterion, you might add the following to a definition box:</p>
+<p><a href="#id33"><span class="problematic" id="id34">|image73|</span></a></p>
+<p>This criterion selects subjects whose weight is either 50 kg or less, OR
+100 kg or greater.</p>
+<ul class="simple">
+<li>To join a definition box with an AND NOT operator, click the
+<strong>Exclude</strong> button above the definition box.</li>
+</ul>
+<p>The figure below selects only male subjects, but not those who weigh
+between 50&nbsp;kg and 100 kg:</p>
+<p><a href="#id35"><span class="problematic" id="id36">|image74|</span></a></p>
+<p>Note that when you click the <strong>Exclude</strong> button, the button label
+changes to <strong>Include</strong>, allowing you to join the criteria in the box
+with an AND operator later if you choose.</p>
+</div>
+<div class="section" id="modifying-or-deleting-criteria">
+<h4>Modifying or Deleting Criteria<a class="headerlink" href="#modifying-or-deleting-criteria" title="Permalink to this headline">¶</a></h4>
+<p>To delete or modify a criterion in a subset definition box, right-click
+the criterion and select either <strong>Delete</strong> or <strong>Set Value</strong>.</p>
+<p>To remove the entire contents of a subset definition box from the subset
+definition, click the <strong>X</strong> icon (<a href="#id37"><span class="problematic" id="id38">|image75|</span></a>) above the box:</p>
+<p><a href="#id39"><span class="problematic" id="id40">|image76|</span></a></p>
+</div>
+</div>
+<div class="section" id="generating-summary-statistics">
+<h3>Generating Summary Statistics<a class="headerlink" href="#generating-summary-statistics" title="Permalink to this headline">¶</a></h3>
+<p>When you finish defining criteria for the groups to compare – the
+subsets – click the <strong>Generate Summary Statistics</strong> button.</p>
+<p>tranSMART displays tables and charts of information that describe the
+subsets. The information is displayed in the Results/Analysis view in
+the following sections:</p>
+<ul class="simple">
+<li>A summary of the criteria used to define subsets to compare. Example:</li>
+</ul>
+<p><a href="#id41"><span class="problematic" id="id42">|image77|</span></a></p>
+<ul>
+<li><p class="first">A table showing the number of subjects in each subset who match the
+subset criteria. Example:</p>
+<blockquote>
+<div><p><a href="#id43"><span class="problematic" id="id44">|image78|</span></a></p>
+<p>In this example, 52 subjects matched the criteria for Subset 1, and
+48 matched the criteria for Subset 2. Further, 25 subjects matched
+the criteria for both subsets (and thus, were included in both).</p>
+</div></blockquote>
+</li>
+<li><p class="first">Tables and charts that show how the subjects who match the criteria
+fit into age, sex, and race demographics. Example (showing the age
+portion only):</p>
+</li>
+</ul>
+<p><a href="#id45"><span class="problematic" id="id46">|image79|</span></a></p>
+<ul class="simple">
+<li>Analyses of the concepts you added to the subsets from the navigation
+tree. Example (showing the weight concept):</li>
+</ul>
+<p><a href="#id47"><span class="problematic" id="id48">|image80|</span></a></p>
+<div class="section" id="significance-tests">
+<h4>Significance Tests<a class="headerlink" href="#significance-tests" title="Permalink to this headline">¶</a></h4>
+<p>The above figure includes the results of significance testing that
+Dataset Explorer performs:</p>
+<p><a href="#id49"><span class="problematic" id="id50">|image81|</span></a></p>
+<p>Significance testing is designed to indicate whether the reliability of
+the statistics is 95% or greater, based on p-value.</p>
+<p>Dataset Explorer calculates the significance result using either t-test
+or chi-squared statistics to determine the p-value:</p>
+<ul class="simple">
+<li>For continuous variables (for example, subject weight or age), a
+t-test compares the observed values in the two subsets.</li>
+</ul>
+<p>tranSMART uses the following Java method to calculate the t-test
+statistic:</p>
+<blockquote>
+<div><a class="reference external" href="http://commons.apache.org/proper/commons-math/apidocs/org/apache/commons/math3/stat/inference/TTest.html#tTest(double[],double[])">http://commons.apache.org/proper/commons-math/apidocs/org/apache/commons/math3/stat/inference/TTest.html#tTest(double[],
+double[])</a></div></blockquote>
+<ul class="simple">
+<li>For categorical values (for example, diagnoses), a chi-squared test
+compares the counts in the two subsets.</li>
+</ul>
+<p>tranSMART uses the following Java method to calculate the chi-squared
+statistic:</p>
+<blockquote>
+<div><a class="reference external" href="http://commons.apache.org/proper/commons-math/apidocs/org/apache/commons/math3/stat/inference/ChiSquareTest.html#chiSquareTest(long[][])">http://commons.apache.org/proper/commons-math/apidocs/org/apache/commons/math3/stat/inference/ChiSquareTest.html#chiSquareTest(long[][])</a></div></blockquote>
+<p>If there is not enough data to calculate a test, Dataset Explorer
+displays a message indicating the insufficient quantity data. Also,
+significance test results are not displayed in the following
+circumstances:</p>
+<ul class="simple">
+<li>If two identical subsets are defined. In this case, the significance
+test results are not meaningful.</li>
+<li>If all subjects in the first subset have one set of values for the
+categorical value, and all subjects in the second subset have other
+categorical values. For example, suppose you set Subset 1 to contain
+only males and Subset 2 to contain only females. Also, suppose that
+Subset 1 has 15 subjects and Subset 2 has 20. If you then try to show
+statistics by gender, a table like the following would result:</li>
+</ul>
+<table border="1" class="docutils">
+<colgroup>
+<col width="29%" />
+<col width="35%" />
+<col width="35%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">&nbsp;</th>
+<th class="head">Subset 1</th>
+<th class="head">Subset 2</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Female</td>
+<td>0</td>
+<td>20</td>
+</tr>
+<tr class="row-odd"><td>Male</td>
+<td>15</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p>In this case, the chi-squared function doesn’t return meaningful
+results.</p>
+</div>
+</div>
+<div class="section" id="defining-points-of-comparison">
+<h3>Defining Points of Comparison<a class="headerlink" href="#defining-points-of-comparison" title="Permalink to this headline">¶</a></h3>
+<p>Once you establish the subsets of subjects that you want to compare, you
+can apply one or more points of comparison to the subsets.</p>
+<p>A point of comparison is a concept in the navigation tree.</p>
+<ol class="arabic">
+<li><p class="first">To apply a point of comparison to the subsets:</p>
+</li>
+<li><dl class="first docutils">
+<dt>You must already have defined the subsets and have generated</dt>
+<dd><p class="first last">summary statistics for the subsets, as described in the previous
+section.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Drag the concept that you want to introduce as the point of</dt>
+<dd><p class="first last">comparison from the navigation tree, and drop it anywhere in the
+Results/Analysis view.</p>
+</dd>
+</dl>
+</li>
+</ol>
+<p>As soon as you drop the point of comparison into the Results/Analysis
+view, tranSMART begins to compare the subsets based on that point of
+comparison. When finished, tranSMART displays a side-by-side summary of
+how the subjects in each subset match or respond to the point of
+comparison.</p>
+<div class="section" id="results-of-a-comparison">
+<h4>Results of a Comparison<a class="headerlink" href="#results-of-a-comparison" title="Permalink to this headline">¶</a></h4>
+<p>In a comparison of subjects in a psychological study, suppose Subset 1
+contains subjects with a substance abuse problem, and Subset 2 contains
+subjects with no substance abuse assessment.</p>
+<p>After the subsets are defined and summary statistics are generated, a
+diagnosis of depression is dropped into the Results/Analysis view as a
+point of comparison. tranSMART displays a side-by-side comparison of the
+subjects in each subset, indicating that almost all the subjects with a
+substance abuse problem have been diagnosed with depression, while that
+diagnosis for those with no substance abuse problem is more evenly
+split.</p>
+<p>The comparison is placed at the top of the Results/Analysis view, above
+the demographic definitions plus any other earlier comparisons:</p>
+<p><a href="#id51"><span class="problematic" id="id52">|image82|</span></a></p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">To keep the size of the preceding figure within production limits, the demographics (age, sex, and race) portions of the figure have been excluded.</p>
+</div>
+</div>
+</div>
+<div class="section" id="printing-or-saving-the-contents-of-the-results-analysis-view">
+<h3>Printing or Saving the Contents of the Results/Analysis View<a class="headerlink" href="#printing-or-saving-the-contents-of-the-results-analysis-view" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li></li>
+<li>With the Results/Analysis view displayed, click <strong>Print</strong>:</li>
+</ol>
+<p><a href="#id53"><span class="problematic" id="id54">|image84|</span></a></p>
+<p>The entire contents of the Results/Analysis view appear in a separate
+browser window.
+#. Click one of the following buttons at the top of the browser window:</p>
+<p><a href="#id55"><span class="problematic" id="id56">|image85|</span></a></p>
+</div>
+<div class="section" id="copying-individual-charts-in-the-results-analysis-view">
+<h3>Copying Individual Charts in the Results/Analysis View<a class="headerlink" href="#copying-individual-charts-in-the-results-analysis-view" title="Permalink to this headline">¶</a></h3>
+<p>If you are interested in a particular chart in the Results/Analysis
+View, you can copy the chart to a file, as follows:</p>
+<ol class="arabic simple">
+<li></li>
+<li>With the Results/Analysis view displayed, click <strong>Print</strong>.</li>
+</ol>
+<p>The entire contents of the Results/Analysis view appear in a separate
+browser window.
+#. Right-click the chart to copy.
+#. In the browser popup menu, click <strong>Save Image As</strong>.
+#. In the Save Picture dialog, specify the name, location, and the file</p>
+<blockquote>
+<div>type for the chart.</div></blockquote>
+<ol class="arabic simple">
+<li>Click <strong>Save</strong>.</li>
+</ol>
+</div>
+</div>
+<div class="section" id="viewing-a-study">
+<h2>Viewing a Study<a class="headerlink" href="#viewing-a-study" title="Permalink to this headline">¶</a></h2>
+<p>You can view a description of any Dataset Explorer study, whether or not
+you have access rights to the study.</p>
+<ol class="arabic">
+<li><p class="first">To view a description of a study:</p>
+</li>
+<li><p class="first">In Dataset Explorer, click the <strong>Navigate Terms</strong> tab.</p>
+</li>
+<li><dl class="first docutils">
+<dt>Open the top-level node for the list of studies you are interested</dt>
+<dd><p class="first last">in – for example, click the <strong>+</strong> icon (<a href="#id57"><span class="problematic" id="id58">|image86|</span></a>) next to Public
+Studies to open the list of experiments:</p>
+</dd>
+</dl>
+</li>
+</ol>
+<p><a href="#id59"><span class="problematic" id="id60">|image87|</span></a>
+#. Right-click the particular study you are interested in.
+#. Click the <strong>Show Definition</strong> popup:</p>
+<p><a href="#id61"><span class="problematic" id="id62">|image88|</span></a></p>
+<p>The Show Concept Definition dialog appears, showing the title,
+description, and other information about the study.</p>
+</div>
+<div class="section" id="exporting-dataset-explorer-findings">
+<h2>Exporting Dataset Explorer Findings<a class="headerlink" href="#exporting-dataset-explorer-findings" title="Permalink to this headline">¶</a></h2>
+<p>The Data Export tab allows you to export your data locally for further
+analysis in several different formats. Exporting data using this tool
+involves the following high-level tasks:</p>
+<p><a href="#id63"><span class="problematic" id="id64">|image89|</span></a></p>
+<p>Supported file formats include:</p>
+<ul class="simple">
+<li>Clinical and low dimensional biomarker data</li>
+<li>Gene expression data</li>
+<li>SNP data</li>
+<li>Gene set enrichment analysis (GSEA)</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">For more information on GSEA data files, visit the following site: <a href="#id3"><span class="problematic" id="id4">*</span></a><a class="reference external" href="http://www.broadinstitute.org/cancer/software/gsea/wiki/index.php/">http://www.broadinstitute.org/cancer/software/gsea/wiki/index.php/</a>   |</p>
+</div>
+<div class="line-block">
+<div class="line">| Data_formats*</div>
+</div>
+<ol class="arabic">
+<li><p class="first">To export Dataset Explorer findings to your local machine:</p>
+</li>
+<li><dl class="first docutils">
+<dt>Click the tranSMART <strong>Dataset Explorer</strong> tab to display the</dt>
+<dd><p class="first last">Dataset Explorer window.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>In the left pane of the Dataset Explorer window, click the</dt>
+<dd><p class="first"><strong>Navigate Terms</strong> tab.</p>
+<p>The navigation tree appears, showing the categories of available
+studies:</p>
+<p class="last"><a href="#id65"><span class="problematic" id="id66">|image91|</span></a></p>
+</dd>
+</dl>
+</li>
+<li><p class="first">Select the study of interest.</p>
+</li>
+<li><p class="first">Define the cohorts whose data points are of interest.</p>
+<blockquote>
+<div><p>Now that the subsets are defined, you are ready to export data
+from the study that applies to the subsets.</p>
+</div></blockquote>
+</li>
+<li><p class="first">Click the <strong>Data Export</strong> tab:</p>
+<blockquote>
+<div><p><a href="#id67"><span class="problematic" id="id68">|image92|</span></a></p>
+<p>The Data Export page appears with your selected cohorts:</p>
+<p><a href="#id69"><span class="problematic" id="id70">|image93|</span></a></p>
+</div></blockquote>
+</li>
+<li><dl class="first docutils">
+<dt>Select the check boxes to indicate the data types and file formats</dt>
+<dd><p class="first last">that are desired for export.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Click <strong>Export Data</strong> at the bottom of the tranSMART browser</dt>
+<dd><p class="first">window.</p>
+<p class="last">The command will now start a job. You may choose to have the job
+run in the background in order to continue with other analyses and
+cohort selection while the job completes. The job could take
+several minutes depending on the amount of data selected.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Click the <strong>Export Jobs</strong> tab to access completed jobs or to check</dt>
+<dd><p class="first">the status of a pending job.</p>
+<p class="last">Jobs follow the naming convention <em>User - Type of Job Run - Job
+ID.</em></p>
+</dd>
+</dl>
+</li>
+<li><p class="first">Click the name of the job you processed:</p>
+<blockquote>
+<div><p><a href="#id71"><span class="problematic" id="id72">|image94|</span></a></p>
+<p>The Open File dialog box appears:</p>
+<p><a href="#id73"><span class="problematic" id="id74">|image95|</span></a></p>
+</div></blockquote>
+</li>
+<li><p class="first">Select <strong>Save File</strong>, then click <strong>OK</strong>.</p>
+<blockquote>
+<div><p>Your file will be sent to the <strong>Downloads</strong> folder on your local
+machine in a .zip file. The .zip file contains separate folders
+for subsets, clinical data, gene expression data, and other
+factors you may have specified during cohort selection.</p>
+</div></blockquote>
+</li>
+</ol>
+</div>
+<div class="section" id="generating-advanced-analyses-and-visualizations">
+<h2>Generating Advanced Analyses and Visualizations<a class="headerlink" href="#generating-advanced-analyses-and-visualizations" title="Permalink to this headline">¶</a></h2>
+<p>Advanced analyses and visualizations offered with tranSMART allow a user
+to produce the following within Dataset Explorer:</p>
+<ul class="simple">
+<li>Heatmaps<ul>
+<li><em>Standard Heatmap</em> (page 49)</li>
+<li><em>Hierarchical Clustering</em> (page 51)</li>
+<li><em>K-Means Clustering</em> (page 54)</li>
+<li><em>Marker Selection</em> (page 56)</li>
+</ul>
+</li>
+<li>Advanced Analyses<ul>
+<li><em>Box Plot with ANOVA</em> (page 59)</li>
+<li><em>Principal Component Analysis</em> (page 61)</li>
+<li><em>Scatter Plot with Linear Regression</em> (page 64)</li>
+<li><em>Survival Analysis</em> (page 66)</li>
+<li><em>Table with Fisher Test Analysis</em> (page 69)</li>
+</ul>
+</li>
+</ul>
+<p>Dataset Explorer uses the R software environment for statistical
+computing and to generate analyses and visualizations. For more
+information, visit <a class="reference external" href="http://www.r-project.org">http://www.r-project.org</a>.</p>
+<div class="section" id="generating-heatmaps">
+<h3>Generating Heatmaps<a class="headerlink" href="#generating-heatmaps" title="Permalink to this headline">¶</a></h3>
+<p>In Dataset Explorer, a heatmap is a matrix of data points for a
+particular set of biomarkers, such as genes, at a particular point in
+time and/or for a particular tissue sample in the study, as measured for
+each subject in the study.</p>
+<p>In a Dataset Explorer heatmap, the biomarkers appear in the y axis, and
+the subjects appear in the x axis.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">A heatmap can display data points for up to 1000 samples.</p>
+</div>
+<p>Dataset Explorer uses the R software environment for statistical
+computing and to generate analyses and visualizations. For more
+information, visit <a class="reference external" href="http://www.r-project.org">http://www.r-project.org</a>.</p>
+<p>You can generate the following types of heatmaps:</p>
+<ul class="simple">
+<li><em>Standard Heatmap</em> (below)</li>
+<li><em>Hierarchical Clustering</em> (page 51)</li>
+<li><em>K-Means Clustering</em> (page 54)</li>
+<li><em>Marker Selection</em> (page 56)</li>
+</ul>
+<div class="section" id="standard-heatmap">
+<h4>Standard Heatmap<a class="headerlink" href="#standard-heatmap" title="Permalink to this headline">¶</a></h4>
+<p>A standard heatmap is a visualization of biomarker data points with no
+indication of patterns, groupings, or differentiation among the data
+points.</p>
+<ol class="arabic">
+<li><p class="first">To generate a standard heatmap:</p>
+</li>
+<li><p class="first">Run tranSMART, then click the <strong>Dataset Explorer</strong> tab.</p>
+</li>
+<li><dl class="first docutils">
+<dt>Define the cohorts you wish to analyze by dragging one or more</dt>
+<dd><p class="first last">concepts from a study into empty subset definition boxes. For more
+information, see <em>Populating the Study Groups</em> .</p>
+</dd>
+</dl>
+</li>
+</ol>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">To compare two subsets, you may drag an additional concept into the Subset 2 comparison box.</p>
+</div>
+<ol class="arabic">
+<li><p class="first">Click the <strong>Advanced Workflow</strong> tab:</p>
+<p><a href="#id75"><span class="problematic" id="id76">|image98|</span></a></p>
+</li>
+<li><p class="first">Select <strong>Heatmap</strong> from the <strong>Analysis</strong> dropdown menu:</p>
+<p><a href="#id77"><span class="problematic" id="id78">|image99|</span></a></p>
+<p>The Variable Selection section appears.</p>
+</li>
+<li><p class="first">Define the heatmap variable by selecting a high dimensional data node
+from the Dataset Explorer tree and dragging it into the Heatmap
+Variable definition box:</p>
+<p><a href="#id79"><span class="problematic" id="id80">|image100|</span></a></p>
+</li>
+</ol>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">High dimensional data nodes are indicated by the icon (<a href="#id81"><span class="problematic" id="id82">|image102|</span></a>) to the left of study data.</p>
+</div>
+<ol class="arabic">
+<li><p class="first">Click the <strong>High Dimensional Data</strong> button.</p>
+<p>The Compare Subsets-Pathway Selection dialog appears.</p>
+</li>
+<li><p class="first">Specify the platform and other factors of interest.</p>
+<p>For more information, see <em>High Dimensional Data</em> .</p>
+</li>
+<li><p class="first">Click <strong>Apply Selections</strong>.</p>
+</li>
+<li><p class="first">Click <strong>Run</strong>.</p>
+<p>Your analysis appears below:</p>
+<p><a href="#id83"><span class="problematic" id="id84">|image103|</span></a></p>
+</li>
+</ol>
+</div>
+<div class="section" id="hierarchical-clustering">
+<h4>Hierarchical Clustering<a class="headerlink" href="#hierarchical-clustering" title="Permalink to this headline">¶</a></h4>
+<p>Hierarchical clustering is a visualization of patterns of related data
+points in gene expression data.</p>
+<ol class="arabic">
+<li><p class="first">To generate a hierarchical clustering heatmap:</p>
+</li>
+<li><p class="first">Run tranSMART, then click the <strong>Dataset Explorer</strong> tab.</p>
+</li>
+<li><dl class="first docutils">
+<dt>Define the cohorts you wish to analyze by dragging one or more</dt>
+<dd><p class="first last">concepts from a study into empty subset definition boxes. For more
+information, see <em>Populating the Study Groups</em> .</p>
+</dd>
+</dl>
+</li>
+</ol>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">To compare two subsets, you may drag an additional concept into the Subset 2 comparison box.</p>
+</div>
+<ol class="arabic">
+<li><p class="first">Click the <strong>Advanced Workflow</strong> tab:</p>
+<p><a href="#id85"><span class="problematic" id="id86">|image105|</span></a></p>
+</li>
+<li><p class="first">Select <strong>Hierarchical Clustering</strong> from the <strong>Analysis</strong> dropdown
+menu:</p>
+<p><a href="#id87"><span class="problematic" id="id88">|image106|</span></a></p>
+<p>The Variable Selection section appears.</p>
+</li>
+<li><p class="first">Define the heatmap variable by selecting a high dimensional data node
+from the Dataset Explorer tree and dragging it into the Heatmap
+Variable definition box:</p>
+<p><a href="#id89"><span class="problematic" id="id90">|image107|</span></a></p>
+</li>
+</ol>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">High dimensional data nodes are indicated by the icon (<a href="#id91"><span class="problematic" id="id92">|image109|</span></a>) to the left of study data.</p>
+</div>
+<ol class="arabic">
+<li><p class="first">Click the <strong>High Dimensional Data</strong> button.</p>
+<p>The Compare Subsets-Pathway Selection dialog appears.</p>
+</li>
+<li><p class="first">Specify the platform and other factors of interest.</p>
+<p>For more information, see <em>High Dimensional Data</em> .</p>
+</li>
+<li><p class="first">Click <strong>Apply Selections</strong>.</p>
+</li>
+<li><p class="first">Click <strong>Run</strong>.</p>
+<p>Your analysis appears below:</p>
+<p><a href="#id93"><span class="problematic" id="id94">|image110|</span></a></p>
+</li>
+</ol>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">To read more about Hierarchical Clustering, visit: <a class="reference external" href="http://www.ics.uci.edu/~eppstein/280/cluster.html">http://www.ics.uci.edu/~eppstein/280/cluster.html</a></p>
+</div>
+</div>
+<div class="section" id="k-means-clustering">
+<h4>K-Means Clustering<a class="headerlink" href="#k-means-clustering" title="Permalink to this headline">¶</a></h4>
+<p>K-Means clustering is a visualization of groupings of the most closely
+related data points, based on the number of groupings you specify.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The K-Means analysis clusters columns together – rows are not clustered.</p>
+</div>
+<ol class="arabic">
+<li><p class="first">To generate a k-means clustering heatmap:</p>
+</li>
+<li><p class="first">Run tranSMART, then click the <strong>Dataset Explorer</strong> tab.</p>
+</li>
+<li><dl class="first docutils">
+<dt>Define the cohorts you wish to analyze by dragging one or more</dt>
+<dd><p class="first last">concepts from a study into empty subset definition boxes. For more
+information, see <em>Populating the Study Groups</em> .</p>
+</dd>
+</dl>
+</li>
+</ol>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">To compare two subsets, you may drag an additional concept into the Subset 2 comparison box.</p>
+</div>
+<ol class="arabic">
+<li><p class="first">Click the <strong>Advanced Workflow</strong> tab:</p>
+<p><a href="#id95"><span class="problematic" id="id96">|image114|</span></a></p>
+</li>
+<li><p class="first">Select <strong>K-Means Clustering</strong> from the <strong>Analysis</strong> dropdown menu:</p>
+<p><a href="#id97"><span class="problematic" id="id98">|image115|</span></a></p>
+<p>The Variable Selection section appears.</p>
+</li>
+<li><p class="first">Define the heatmap variable by selecting a high dimensional data node
+from the Dataset Explorer tree and dragging it into the Heatmap
+Variable definition box:</p>
+<p><a href="#id99"><span class="problematic" id="id100">|image116|</span></a></p>
+</li>
+</ol>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">High dimensional data nodes are indicated by the icon (<a href="#id101"><span class="problematic" id="id102">|image118|</span></a>) to the left of study data.</p>
+</div>
+<ol class="arabic">
+<li><p class="first">Click the <strong>High Dimensional Data</strong> button.</p>
+<p>The Compare Subsets-Pathway Selection dialog appears.</p>
+</li>
+<li><p class="first">Specify the platform and other factors of interest.</p>
+<p>For more information, see <em>High Dimensional Data</em> .</p>
+</li>
+<li><p class="first">Click <strong>Apply Selections</strong>.</p>
+</li>
+<li><p class="first">In the <strong>Number of clusters</strong> field, type a numerical value.</p>
+</li>
+<li><p class="first">Click <strong>Run</strong>.</p>
+<p>Your analysis appears below:</p>
+<p><a href="#id103"><span class="problematic" id="id104">|image119|</span></a></p>
+</li>
+</ol>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">To read more about K-Means Clustering, visit: <a class="reference external" href="http://www.ics.uci.edu/~eppstein/280/cluster.html">http://www.ics.uci.edu/~eppstein/280/cluster.html</a></p>
+</div>
+</div>
+<div class="section" id="marker-selection">
+<h4>Marker Selection<a class="headerlink" href="#marker-selection" title="Permalink to this headline">¶</a></h4>
+<p>A marker selection heatmap is a visualization of differentially
+expressed genes in distinct phenotypes. Specifically, the algorithm
+determines the set of genes which is most differently expressed between
+the two subsets. This list of differentially expressed genes is
+subsequently presented in a table, along with a variety of accompanying
+statistics.</p>
+<ol class="arabic">
+<li><p class="first">To generate a marker selection heatmap:</p>
+</li>
+<li><p class="first">Run tranSMART, then click the <strong>Dataset Explorer</strong> tab.</p>
+</li>
+<li><dl class="first docutils">
+<dt>Define the cohorts you wish to analyze by dragging one or more</dt>
+<dd><p class="first last">concepts from a study into empty subset definition boxes. For more
+information, see <em>Populating the Study Groups</em> .</p>
+</dd>
+</dl>
+</li>
+</ol>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Two subsets must be specified when using a Marker Selection heatmap.</p>
+</div>
+<ol class="arabic">
+<li><p class="first">Click the <strong>Advanced Workflow</strong> tab:</p>
+<p><a href="#id105"><span class="problematic" id="id106">|image122|</span></a></p>
+</li>
+<li><p class="first">Select <strong>Marker Selection</strong> from the <strong>Analysis</strong> dropdown menu:</p>
+<p><a href="#id107"><span class="problematic" id="id108">|image123|</span></a></p>
+<p>The Variable Selection section appears.</p>
+</li>
+<li><p class="first">Define the required variable by selecting a high dimensional data
+node from the Dataset Explorer tree and dragging it into the Marker
+Variable definition box:</p>
+<p><a href="#id109"><span class="problematic" id="id110">|image124|</span></a></p>
+</li>
+</ol>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">High dimensional data nodes are indicated by the icon (<a href="#id111"><span class="problematic" id="id112">|image126|</span></a>) to the left of study data.</p>
+</div>
+<ol class="arabic">
+<li><p class="first">Click the <strong>High Dimensional Data</strong> button.</p>
+<p>The Compare Subsets-Pathway Selection dialog appears.</p>
+</li>
+<li><p class="first">Specify the platform and other factors of interest.</p>
+<p>For more information, see <em>High Dimensional Data</em> .</p>
+</li>
+<li><p class="first">Click <strong>Apply Selections</strong>.</p>
+<p>In the <strong>Number of Markers</strong> field, type a numerical value. This will
+determine the number of differentially expressed genes that are
+returned.</p>
+</li>
+<li><p class="first">Click <strong>Run</strong>.</p>
+<p>Your analysis appears below:</p>
+<p><a href="#id113"><span class="problematic" id="id114">|image127|</span></a></p>
+</li>
+</ol>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">For more information on the analyses used in Marker Selection, visit: <a class="reference external" href="http://mathworld.wolfram.com/BonferroniCorrection.html">http://mathworld.wolfram.com/BonferroniCorrection.html</a></p>
+</div>
+</div>
+</div>
+<div class="section" id="generating-advanced-analyses">
+<h3>Generating Advanced Analyses<a class="headerlink" href="#generating-advanced-analyses" title="Permalink to this headline">¶</a></h3>
+<p>Advanced analyses include:</p>
+<ul class="simple">
+<li><em>Box Plot with ANOVA</em> (page 59)</li>
+<li><em>Principal Component Analysis</em> (page 61)</li>
+<li><em>Scatter Plot with Linear Regression</em> (page 64)</li>
+<li><em>Survival Analysis</em> (page 66)</li>
+<li><em>Table with Fisher Test Analysis</em> (page 69)</li>
+</ul>
+<div class="section" id="box-plot-with-anova">
+<h4>Box Plot with ANOVA<a class="headerlink" href="#box-plot-with-anova" title="Permalink to this headline">¶</a></h4>
+<p>A box plot with ANOVA analysis displays a box and whisker plot with
+corresponding analysis of variance in the sample(s).</p>
+<ol class="arabic">
+<li><p class="first">To perform a box plot with ANOVA analysis:</p>
+</li>
+<li><p class="first">Run tranSMART, then click the <strong>Dataset Explorer</strong> tab.</p>
+</li>
+<li><dl class="first docutils">
+<dt>Define the cohorts you wish to analyze by dragging one or more</dt>
+<dd><p class="first last">concepts from a study into empty subset definition boxes. For more
+information, see <em>Populating the Study Groups</em> .</p>
+</dd>
+</dl>
+</li>
+</ol>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Only one subset may be specified in this analysis. Information in Subset 2 will be ignored.</p>
+</div>
+<ol class="arabic">
+<li><p class="first">Click the <strong>Advanced Workflow</strong> tab:</p>
+<p><a href="#id115"><span class="problematic" id="id116">|image130|</span></a></p>
+</li>
+<li><p class="first">Select <strong>Box Plot with ANOVA</strong> from the <strong>Analysis</strong> dropdown menu:</p>
+<p><a href="#id117"><span class="problematic" id="id118">|image131|</span></a></p>
+<p>The Variable Selection section appears. You will need to define what
+variables in the study are independent, and what variables are
+dependent. At least one of the variables should be continuous (for
+example, Age), and one should be a categorical value (for example,
+Tissue Type).</p>
+</li>
+</ol>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If the <em>independent variable</em> defines the groups, boxes will be plotted horizontally. If the <em>dependent variable</em> defines the groups, boxes will be plotted vertically.</p>
+</div>
+<ol class="arabic simple">
+<li>Define the variables.</li>
+</ol>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">In this example, the data binning feature is not used. For future reference, data binning refers to a pre-processing technique used to reduce minor observation errors. Clusters of data are replaced by a value representative of that cluster (the central value). For information on binning, see <em>Data Binning</em> .</p>
+</div>
+<ol class="arabic">
+<li><p class="first">Click <strong>Run</strong>.</p>
+<p>Your analysis appears below:</p>
+<p><a href="#id119"><span class="problematic" id="id120">|image134|</span></a></p>
+</li>
+</ol>
+</div>
+<div class="section" id="principal-component-analysis">
+<h4>Principal Component Analysis<a class="headerlink" href="#principal-component-analysis" title="Permalink to this headline">¶</a></h4>
+<p>In a principal component analysis (PCA), the total number of variables
+in the dataset is reduced to a smaller number of variables – the
+principle components of the dataset.</p>
+<p>Principal component variables are calculated from correlated variables
+in the total dataset. In other words, the principal component analysis
+is a workflow used to identify variance in a dataset. The analysis can
+be run on an entire microarray chip, or on a pathway.</p>
+<ol class="arabic">
+<li><p class="first">To perform a principal component analysis:</p>
+</li>
+<li><p class="first">Run tranSMART, then click the <strong>Dataset Explorer</strong> tab.</p>
+</li>
+<li><dl class="first docutils">
+<dt>Define the cohorts you wish to analyze by dragging one or more</dt>
+<dd><p class="first last">concepts from a study into empty subset definition boxes. For more
+information, see <em>Populating the Study Groups</em> .</p>
+</dd>
+</dl>
+</li>
+</ol>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Only one subset may be specified in this analysis. Information in Subset 2 will be ignored.</p>
+</div>
+<ol class="arabic">
+<li><p class="first">Click the <strong>Advanced Workflow</strong> tab:</p>
+<p><a href="#id121"><span class="problematic" id="id122">|image136|</span></a></p>
+</li>
+<li><p class="first">Select <strong>PCA</strong> from the <strong>Analysis</strong> dropdown menu:</p>
+<p><a href="#id123"><span class="problematic" id="id124">|image137|</span></a></p>
+<p>The Variable Selection section appears.</p>
+</li>
+<li><p class="first">Define the heatmap variable by selecting a high dimensional data node
+from the Dataset Explorer tree and dragging it into the PCA Variable
+definition box:</p>
+<p><a href="#id125"><span class="problematic" id="id126">|image138|</span></a></p>
+</li>
+</ol>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">High dimensional data nodes are indicated by the ( <a href="#id127"><span class="problematic" id="id128">|image140|</span></a> ) icon to the left of study data.</p>
+</div>
+<ol class="arabic">
+<li><p class="first">Click the <strong>High Dimensional Data</strong> button.</p>
+<p>The Compare Subsets-Pathway Selection dialog appears.</p>
+</li>
+<li><p class="first">Specify the platform and other factors of interest.</p>
+<p>For more information, see <em>High Dimensional Data</em> .</p>
+</li>
+<li><p class="first">Click <strong>Apply Selections</strong>.</p>
+</li>
+<li><p class="first">Click <strong>Run</strong>.</p>
+<p>Your analysis appears below:</p>
+<p><a href="#id129"><span class="problematic" id="id130">|image141|</span></a></p>
+</li>
+</ol>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">For more information regarding PCAs, see: <a class="reference external" href="http://psb.stanford.edu/psb-online/proceedings/psb00/raychaudhuri.pdf">http://psb.stanford.edu/psb-online/proceedings/psb00/raychaudhuri.pdf</a>.</p>
+</div>
+</div>
+<div class="section" id="scatter-plot-with-linear-regression">
+<h4>Scatter Plot with Linear Regression<a class="headerlink" href="#scatter-plot-with-linear-regression" title="Permalink to this headline">¶</a></h4>
+<p>A scatter plot displays values for two variables within a dataset, with
+a line that best fits the slope of the data.</p>
+<ol class="arabic">
+<li><p class="first">To perform a scatter plot with linear regression analysis:</p>
+</li>
+<li><p class="first">Run tranSMART, then click the <strong>Dataset Explorer</strong> tab.</p>
+</li>
+<li><dl class="first docutils">
+<dt>Define the cohorts you wish to analyze by dragging one or more</dt>
+<dd><p class="first last">concepts from a study into empty subset definition boxes. For more
+information, see <em>Populating the Study Groups</em> .</p>
+</dd>
+</dl>
+</li>
+</ol>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Only one subset may be specified in this analysis. Information in Subset 2 will be ignored.</p>
+</div>
+<ol class="arabic">
+<li><p class="first">Click the <strong>Advanced Workflow</strong> tab above Subset 1:</p>
+<p><a href="#id131"><span class="problematic" id="id132">|image144|</span></a></p>
+</li>
+<li><p class="first">Select <strong>Scatter Plot with Linear Regression</strong> from the <strong>Analysis</strong>
+dropdown menu:</p>
+<p><a href="#id133"><span class="problematic" id="id134">|image145|</span></a></p>
+<p>The Variable Selection section appears. You will need to define what
+variables in the study are independent, and what variables are
+dependent. Both variables should be continuous (for example, Age).</p>
+</li>
+<li><p class="first">Define the variables.</p>
+</li>
+<li><p class="first">Click <strong>Run</strong>.</p>
+<p>Your analysis appears below:</p>
+<p><a href="#id135"><span class="problematic" id="id136">|image146|</span></a></p>
+</li>
+</ol>
+</div>
+<div class="section" id="survival-analysis">
+<h4>Survival Analysis<a class="headerlink" href="#survival-analysis" title="Permalink to this headline">¶</a></h4>
+<p>A survival analysis displays time-to-event data.</p>
+<ol class="arabic">
+<li><p class="first">To perform a survival analysis:</p>
+</li>
+<li><p class="first">Run tranSMART, then click the <strong>Dataset Explorer</strong> tab.</p>
+</li>
+<li><dl class="first docutils">
+<dt>Define the cohorts you wish to analyze by dragging one or more</dt>
+<dd><p class="first last">concepts from a study into empty subset definition boxes. For more
+information, see <em>Populating the Study Groups</em> .</p>
+</dd>
+</dl>
+</li>
+<li><p class="first">Click the <strong>Advanced Workflow</strong> tab above Subset 1:</p>
+<blockquote>
+<div><p><a href="#id137"><span class="problematic" id="id138">|image147|</span></a></p>
+</div></blockquote>
+</li>
+<li><p class="first">Select <strong>Survival Analysis</strong> from the <strong>Analysis</strong> dropdown menu:</p>
+<blockquote>
+<div><p><a href="#id139"><span class="problematic" id="id140">|image148|</span></a></p>
+<p>The Variable Selection section appears.</p>
+</div></blockquote>
+</li>
+<li><p class="first">Define the following variables:</p>
+</li>
+</ol>
+<ol class="arabic">
+<li><p class="first">Click <strong>Run</strong>.</p>
+<p>Your analysis appears below:</p>
+<p><a href="#id141"><span class="problematic" id="id142">|image153|</span></a></p>
+</li>
+</ol>
+</div>
+<div class="section" id="table-with-fisher-test-analysis">
+<h4>Table with Fisher Test Analysis<a class="headerlink" href="#table-with-fisher-test-analysis" title="Permalink to this headline">¶</a></h4>
+<p>A Fisher Test analysis examines the significance of associated
+variables.</p>
+<ol class="arabic">
+<li><p class="first">To perform a table with fisher test analysis:</p>
+</li>
+<li><p class="first">Run tranSMART, then click the <strong>Dataset Explorer</strong> tab.</p>
+</li>
+<li><dl class="first docutils">
+<dt>Define the cohorts you wish to analyze by dragging one or more</dt>
+<dd><p class="first last">concepts from a study into empty subset definition boxes. For more
+information, see <em>Populating the Study Groups</em> .</p>
+</dd>
+</dl>
+</li>
+</ol>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Only one subset may be specified in this analysis. Information in Subset 2 will be ignored.</p>
+</div>
+<ol class="arabic">
+<li><p class="first">Click the <strong>Advanced Workflow</strong> tab:</p>
+<p><a href="#id143"><span class="problematic" id="id144">|image155|</span></a></p>
+</li>
+<li><p class="first">Select <strong>Table with Fisher Test</strong> from the <strong>Analysis</strong> dropdown
+menu:</p>
+<p><a href="#id145"><span class="problematic" id="id146">|image156|</span></a></p>
+<p>The Variable Selection section appears. You will need to define what
+variables in the study are independent, and what variables are
+dependent. Both variables should be categorical values (for example,
+Tissue Type).</p>
+</li>
+</ol>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">In this example, the data binning feature is not used. For future reference, data binning refers to a pre-processing technique used to reduce minor observation errors. Clusters of data are replaced by a value representative of that cluster (the central value). For information on data binning, see <em>Data Binning</em> .</p>
+</div>
+<ol class="arabic">
+<li><p class="first">Define the variables.</p>
+</li>
+<li><p class="first">Click <strong>Run</strong>.</p>
+<p>Your analysis appear below:</p>
+<p><a href="#id147"><span class="problematic" id="id148">|image158|</span></a></p>
+</li>
+</ol>
+</div>
+</div>
+<div class="section" id="data-binning">
+<h3>Data Binning<a class="headerlink" href="#data-binning" title="Permalink to this headline">¶</a></h3>
+<p>Data binning refers to a pre-processing technique used to reduce
+observation errors and to allow continuous variables to become
+categorical. Clusters of data are replaced by a value representative of
+that cluster (the central value).</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The data displayed after binning represents the data available in the study. If, for example, you have selected to bin based on date range (0-10 years of age), yet there is only data available for subjects eight years old and up, the bin will display the age range as 8-10.</p>
+</div>
+<div class="section" id="data-binning-using-box-plot-with-anova">
+<h4>Data Binning Using Box Plot with ANOVA<a class="headerlink" href="#data-binning-using-box-plot-with-anova" title="Permalink to this headline">¶</a></h4>
+<p>When conducting a Box Plot with ANOVA analysis, at least one of the
+variables selected should be a continuous variable (for example, age),
+and the other should be a categorical value (for example, tumor stage).</p>
+<p>A continuous variable can be viewed as a categorical value using the
+binning feature, described below. Alternatively, binning can also be
+used to categorize data. For example, if histological grade with values
+such as Well Defined, Moderately Well Defined, and Poorly Defined are
+selected, you can group Moderately Well Defined with Poorly Defined and
+treat them as one group for the purposes of this analysis.</p>
+<ol class="arabic">
+<li><p class="first">To use the data binning feature with a box plot analysis:</p>
+</li>
+<li><p class="first">Run tranSMART, then click the <strong>Dataset Explorer</strong> tab.</p>
+</li>
+<li><dl class="first docutils">
+<dt>Define the cohorts you wish to analyze by dragging one or more</dt>
+<dd><p class="first last">concepts from a study into empty subset definition boxes. For more
+information, see <em>Populating the Study Groups</em> .</p>
+</dd>
+</dl>
+</li>
+<li><p class="first">Click the <strong>Advanced Workflow</strong> tab:</p>
+<blockquote>
+<div><p><a href="#id149"><span class="problematic" id="id150">|image160|</span></a></p>
+</div></blockquote>
+</li>
+<li><dl class="first docutils">
+<dt>Select <strong>Box Plot with ANOVA</strong> from the <strong>Analysis</strong> dropdown</dt>
+<dd><p class="first">menu:</p>
+<p><a href="#id151"><span class="problematic" id="id152">|image161|</span></a></p>
+<p class="last">The Variable Selection section appears. You will need to define
+what variables in the study are independent, and what variables
+are dependent. At least one of the variables should be continuous
+(for example, Age), and one should be a categorical value (for
+example, Tissue Type).</p>
+</dd>
+</dl>
+</li>
+<li><p class="first">Define the variables.</p>
+</li>
+<li><p class="first">Under <strong>Binning</strong>, click <strong>Enable</strong>:</p>
+<blockquote>
+<div><p><a href="#id153"><span class="problematic" id="id154">|image162|</span></a></p>
+</div></blockquote>
+</li>
+<li><p class="first">Define the following:</p>
+</li>
+</ol>
+<table border="1" class="docutils">
+<colgroup>
+<col width="5%" />
+<col width="30%" />
+<col width="65%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Description</th>
+<th class="head">Comments</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Variable</td>
+<td>Select which variable should define the groups (Independent or Dependent) from the dropdown menu.</td>
+<td>If the <em>independent variable</em> defines the groups, boxes will be plotted horizontally. If the <em>dependent variable</em> defines the groups, boxes will be plotted vertically</td>
+</tr>
+<tr class="row-odd"><td>Variable Type</td>
+<td>Select whether the variable you have defined above is continuous or categorical from the dropdown menu.</td>
+<td>A continuous variable can be turned into a categorical variable when you use the binning feature.</td>
+</tr>
+<tr class="row-even"><td>Number of Bins</td>
+<td>Type the number of bins you would like data to be organized in.</td>
+<td>This step may require trial and error based on how you wish to display data.</td>
+</tr>
+<tr class="row-odd"><td>Bin Assignments</td>
+<td><p class="first">Select how you would like data to be binned from the dropdown menu.</p>
+<p class="last"><strong>Note:</strong> This feature can only be used when the variable type selected above is continuous.</p>
+</td>
+<td><ul class="first last simple">
+<li><strong>Evenly Distribute Population:</strong> assigns bins based on the underlying data. For example, if the majority of the subjects in the study were elderly, bins based on age could look like: [(1-40), (40-80), (81-85), (86-90), (90-92)].</li>
+<li><strong>Evenly Spaced Bins:</strong> creates bins based on the overall range of the variable. For example, if the majority of the subjects in the study were elderly, bins based on age could look like: [(1-20), (21-40), (41-60), (61-80), (81-100)].</li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td>Manual Binning</td>
+<td><p class="first">Select the checkbox if you wish to bin manually.</p>
+<p class="last"><strong>Note:</strong> This is the only binning method available if you are attempting to bin a categorical variable type.</p>
+</td>
+<td><p class="first">Complete the binning form that populates as a result of checking the <strong>Manual Binning</strong> box.</p>
+<p>For continuous data:</p>
+<p><a href="#id155"><span class="problematic" id="id156">|image163|</span></a></p>
+<p>For categorical data:</p>
+<p class="last"><a href="#id157"><span class="problematic" id="id158">|image164|</span></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple">
+<li>Click <strong>Run</strong>.</li>
+</ol>
+</div>
+<div class="section" id="data-binning-using-survival-analysis">
+<h4>Data Binning Using Survival Analysis<a class="headerlink" href="#data-binning-using-survival-analysis" title="Permalink to this headline">¶</a></h4>
+<p>Data binning is used in survival analyses if the variable you wish to
+use is continuous (for example, age), but needs to be viewed as
+categorical data. Alternatively, it can be used to regroup categorical
+data. For example, if histological grade with values such as <em>Well
+Defined</em>, <em>Moderately Well Defined</em>, and <em>Poorly Defined</em> are selected,
+you can group <em>Moderately Well Defined</em> with <em>Poorly Defined</em> and treat
+them as one group for the purposes of this analysis.</p>
+<ol class="arabic">
+<li><p class="first">To use the data binning feature with a survival analysis:</p>
+</li>
+<li><p class="first">Run tranSMART, then click the <strong>Dataset Explorer</strong> tab.</p>
+</li>
+<li><dl class="first docutils">
+<dt>Define the cohorts you wish to analyze by dragging one or more</dt>
+<dd><p class="first last">concepts from a study into empty subset definition boxes. For more
+information, see <em>Populating the Study Groups</em> .</p>
+</dd>
+</dl>
+</li>
+<li><p class="first">Click the <strong>Advanced Workflow</strong> tab:</p>
+<blockquote>
+<div><p><a href="#id159"><span class="problematic" id="id160">|image165|</span></a></p>
+</div></blockquote>
+</li>
+<li><p class="first">Select <strong>Survival Analysis</strong> from the <strong>Analysis</strong> dropdown menu:</p>
+<blockquote>
+<div><p><a href="#id161"><span class="problematic" id="id162">|image166|</span></a></p>
+<p>The Variable Selection section appears.</p>
+</div></blockquote>
+</li>
+<li><p class="first">Define the variables:</p>
+</li>
+</ol>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="8%" />
+<col width="65%" />
+<col width="13%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Variable</th>
+<th class="head">Required?</th>
+<th class="head">Description</th>
+<th class="head">Example</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Time</td>
+<td>Yes</td>
+<td>A time variable used in the study.</td>
+<td>Survival Time</td>
+</tr>
+<tr class="row-odd"><td>Category</td>
+<td>No</td>
+<td><p class="first">A variable that you wish to use to sort the cohorts.</p>
+<p class="last">If the variable you wish to use is continuous (for example, age), the binning feature should be used.</p>
+</td>
+<td>Cancer Stage</td>
+</tr>
+<tr class="row-even"><td>Censoring Variable</td>
+<td>No</td>
+<td>A censoring variable (occurs when the value of a measurement/observation is partially known).</td>
+<td>Survival (Censor)</td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic">
+<li><p class="first">Under <strong>Binning</strong>, click <strong>Enable</strong>:</p>
+<p><a href="#id163"><span class="problematic" id="id164">|image167|</span></a></p>
+</li>
+<li><p class="first">Define the following:</p>
+</li>
+</ol>
+<table border="1" class="docutils">
+<colgroup>
+<col width="7%" />
+<col width="39%" />
+<col width="55%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Description</th>
+<th class="head">Comments</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Variable Type</td>
+<td>Select whether the variable you have defined above is continuous or categorical.</td>
+<td>A continuous variable can be treated as a categorical variable when you use the binning feature.</td>
+</tr>
+<tr class="row-odd"><td>Number of Bins</td>
+<td>Type the number of bins you would like data to be organized in.</td>
+<td>This step may require trial and error based on how you wish to display data.</td>
+</tr>
+<tr class="row-even"><td>Bin Assignments</td>
+<td><p class="first">Select how you would like data to be binned.</p>
+<p class="last"><strong>Note:</strong> This feature can only be used when the variable type selected above is continuous.</p>
+</td>
+<td><ul class="first last">
+<li><p class="first">Evenly Distribute Population: assigns bins based on the underlying data.</p>
+<p>For example, if the majority of the subjects in the study were elderly, bins based on age could look like: [(1-40), (40-80), (81-85), (86-90), (90-92)].</p>
+</li>
+<li><p class="first">Evenly Spaced Bins: creates bins based on the overall range of the variable.</p>
+<p>For example, if the majority of the subjects in the study were elderly, bins based on age could look like: [(1-20), (21-40), (41-60), (61-80), (81-100)].</p>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td>Manual Binning</td>
+<td><p class="first">Select the checkbox if you wish to bin manually.</p>
+<p class="last"><strong>Note:</strong> This is the only binning method available if you are attempting to bin a categorical variable type.</p>
+</td>
+<td><p class="first">Complete the binning form that populates as a result of checking the <strong>Manual Binning</strong> box.</p>
+<ul class="simple">
+<li>For continuous data:</li>
+</ul>
+<p><a href="#id165"><span class="problematic" id="id166">|image168|</span></a></p>
+<ul class="simple">
+<li>For categorical data:</li>
+</ul>
+<p class="last"><a href="#id167"><span class="problematic" id="id168">|image169|</span></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple">
+<li>Click <strong>Run</strong>.</li>
+</ol>
+</div>
+</div>
+<div class="section" id="high-dimensional-data">
+<h3>High Dimensional Data<a class="headerlink" href="#high-dimensional-data" title="Permalink to this headline">¶</a></h3>
+<p>The High Dimensional Data button available within the Advanced Workflow
+section of Dataset Explorer allows you to specify additional inputs for
+selected variables. These inputs help filter specific information of
+value (such as platforms, samples, or timepoints).</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The High Dimensional Data feature must be used when you perform an analysis using high dimensional data (such as SNP, gene expression, RBM, etc.) symbolized by the DNA icon (<a href="#id169"><span class="problematic" id="id170">|image171|</span></a>). Additionally, the High Dimensional Data feature cannot be used without high dimensional data.</p>
+</div>
+<ol class="arabic">
+<li><p class="first">To use the High Dimensional Data feature:</p>
+</li>
+<li><dl class="first docutils">
+<dt>Click the tranSMART <strong>Dataset Explorer</strong> tab to display the</dt>
+<dd><p class="first last">Dataset Explorer window.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>In the left pane of the Dataset Explorer window, click the</dt>
+<dd><p class="first"><strong>Navigate Terms</strong> tab.</p>
+<p>The navigation tree appears, showing the categories of available
+studies:</p>
+<p class="last"><a href="#id171"><span class="problematic" id="id172">|image172|</span></a></p>
+</dd>
+</dl>
+</li>
+<li><p class="first">Select the study of interest.</p>
+</li>
+<li><dl class="first docutils">
+<dt>Drag the study of interest into a subset definition box in Subset</dt>
+<dd><ol class="first last arabic simple">
+<li></li>
+</ol>
+</dd>
+</dl>
+</li>
+<li><p class="first">Click the <strong>Advanced Workflow</strong> tab above Subset 1:</p>
+<blockquote>
+<div><p><a href="#id173"><span class="problematic" id="id174">|image173|</span></a></p>
+</div></blockquote>
+</li>
+<li><dl class="first docutils">
+<dt>Select the analysis you wish to perform, and define at least one</dt>
+<dd><p class="first last">variable using high dimensional data.</p>
+</dd>
+</dl>
+</li>
+<li><p class="first">Click the <strong>High Dimensional Data</strong> button.</p>
+<blockquote>
+<div><p>The Compare Subsets-Pathway Selection dialog appears.</p>
+</div></blockquote>
+</li>
+<li><p class="first">Define the following available filters:</p>
+</li>
+</ol>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Dataset Explorer will attempt to pre-populate default values in the associated fields of the dialog based on the underlying data in the variable selection box.</p>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="9%" />
+<col width="91%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Filter</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Platform</td>
+<td>The platform type (for example, SNP, mRNA, etc.) used to collect biomarker data in the study.</td>
+</tr>
+<tr class="row-odd"><td>GPL Platform</td>
+<td>The specific name of the platform used in the study.</td>
+</tr>
+<tr class="row-even"><td>Sample</td>
+<td>The type of sample tested in the study.</td>
+</tr>
+<tr class="row-odd"><td>Tissue Type</td>
+<td>The type of tissue tested in the study.</td>
+</tr>
+<tr class="row-even"><td>Timepoint</td>
+<td>The time period when the sample was taken.</td>
+</tr>
+<tr class="row-odd"><td>Select a Gene/Pathway</td>
+<td><p class="first">The gene, gene signature, or pathway of interest.</p>
+<p class="last">If you would like to run the analysis on the entire chip, leave this field blank.</p>
+</td>
+</tr>
+<tr class="row-even"><td>Select SNP Type</td>
+<td><p class="first">Select the type of SNP data being used:</p>
+<ul class="simple">
+<li>Genotype – Use for categorical variables.</li>
+<li>Copy Number – Use for continuous variables.</li>
+</ul>
+<p><strong>Note:</strong> This option is only available when you drag SNP data into the variable selection box.</p>
+<p class="last"><strong>Note:</strong> Both Genotype and Copy Number data may not be available for all studies involving SNP data.</p>
+</td>
+</tr>
+<tr class="row-odd"><td>Aggregate Probes?</td>
+<td><p class="first">The checkbox can be selected if the variable chosen is either gene expression data or SNP copy number data.</p>
+<p>If the checkbox is selected, the algorithm WGCNA (weighted correlation network analysis) is employed. For genes that are comprised of multiple probes, WGCNA selects the probe that best represents the overall expression level or copy number.</p>
+<p class="last"><strong>Note:</strong> WGCNA was developed by the Department of Human Genetics at UCLA. For more information, see <a class="reference external" href="http://www.genetics.ucla.edu/labs/horvath/CoexpressionNetwork/">http://www.genetics.ucla.edu/labs/horvath/CoexpressionNetwork/</a>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple">
+<li>Click <strong>Apply Selections</strong>.</li>
+<li>Define any additional required variables, then click <strong>Run</strong>.</li>
+</ol>
+</div>
+<div class="section" id="other-features">
+<h3>Other Features<a class="headerlink" href="#other-features" title="Permalink to this headline">¶</a></h3>
+<p>The sections below illustrate additional features in the Advanced
+Workflow tab.</p>
+<div class="section" id="save-to-pdf">
+<h4>Save to PDF<a class="headerlink" href="#save-to-pdf" title="Permalink to this headline">¶</a></h4>
+<p>The Save to PDF feature allows you to save analyses run through the
+Advanced Workflow function within Dataset Explorer.</p>
+<ol class="arabic">
+<li><p class="first">To save advanced workflow analyses as a PDF file:</p>
+</li>
+<li><dl class="first docutils">
+<dt>Click the tranSMART <strong>Dataset Explorer</strong> tab to display the</dt>
+<dd><p class="first last">Dataset Explorer window.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>In the left pane of the Dataset Explorer window, click the</dt>
+<dd><p class="first"><strong>Navigate Terms</strong> tab.</p>
+<p>The navigation tree appears, showing the categories of available
+studies:</p>
+<p class="last"><a href="#id175"><span class="problematic" id="id176">|image175|</span></a></p>
+</dd>
+</dl>
+</li>
+<li><p class="first">Select the study of interest.</p>
+</li>
+<li><dl class="first docutils">
+<dt>Drag the study of interest into a subset definition box in Subset</dt>
+<dd><ol class="first last arabic simple">
+<li></li>
+</ol>
+</dd>
+</dl>
+</li>
+<li><p class="first">Click the <strong>Advanced Workflow</strong> tab above Subset 1:</p>
+<blockquote>
+<div><p><a href="#id177"><span class="problematic" id="id178">|image176|</span></a></p>
+</div></blockquote>
+</li>
+<li><dl class="first docutils">
+<dt>Select the analysis you wish to perform, and define the variables</dt>
+<dd><p class="first last">accordingly.</p>
+</dd>
+</dl>
+</li>
+<li><p class="first">Click <strong>Run</strong>.</p>
+<blockquote>
+<div><p>Your analysis appears below the variable selection panes.</p>
+</div></blockquote>
+</li>
+<li><p class="first">Click <strong>Save to PDF</strong>:</p>
+<blockquote>
+<div><p><a href="#id179"><span class="problematic" id="id180">|image177|</span></a></p>
+<p>The following dialog appears:</p>
+<p><a href="#id181"><span class="problematic" id="id182">|image178|</span></a></p>
+</div></blockquote>
+</li>
+<li><p class="first">Select <strong>Open with</strong> or <strong>Save File</strong>, then click <strong>OK</strong>.</p>
+</li>
+</ol>
+</div>
+<div class="section" id="download-raw-r-data">
+<h4>Download Raw R Data<a class="headerlink" href="#download-raw-r-data" title="Permalink to this headline">¶</a></h4>
+<p>Analyses run through the Advanced Workflow tool within Dataset Explorer
+use R for computation. You are able to download raw R data for use in an
+external tool.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">For more information on The R Project for Statistical Computing, visit the following site: <em>www.r-project.org</em>.</p>
+</div>
+<ol class="arabic">
+<li><p class="first">To download advanced workflow analyses as raw R data:</p>
+</li>
+<li><dl class="first docutils">
+<dt>Click the tranSMART <strong>Dataset Explorer</strong> tab to display the</dt>
+<dd><p class="first last">Dataset Explorer window.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>In the left pane of the Dataset Explorer window, click the</dt>
+<dd><p class="first"><strong>Navigate Terms</strong> tab.</p>
+<p>The navigation tree appears, showing the categories of available
+studies:</p>
+<p class="last"><a href="#id183"><span class="problematic" id="id184">|image180|</span></a></p>
+</dd>
+</dl>
+</li>
+<li><p class="first">Select the study of interest.</p>
+</li>
+<li><dl class="first docutils">
+<dt>Drag the study of interest into a subset definition box in Subset</dt>
+<dd><ol class="first last arabic simple">
+<li></li>
+</ol>
+</dd>
+</dl>
+</li>
+<li><p class="first">Click the <strong>Advanced Workflow</strong> tab above Subset 1:</p>
+<blockquote>
+<div><p><a href="#id185"><span class="problematic" id="id186">|image181|</span></a></p>
+</div></blockquote>
+</li>
+<li><dl class="first docutils">
+<dt>Select the analysis you wish to perform, and define the variables</dt>
+<dd><p class="first last">accordingly.</p>
+</dd>
+</dl>
+</li>
+<li><p class="first">Click <strong>Run</strong>.</p>
+<blockquote>
+<div><p>Your analysis appears below the variable selection panes.</p>
+</div></blockquote>
+</li>
+<li><p class="first">Click <strong>Download raw R data</strong>:</p>
+<blockquote>
+<div><p><a href="#id187"><span class="problematic" id="id188">|image182|</span></a></p>
+<p>The following dialog appears:</p>
+<p><a href="#id189"><span class="problematic" id="id190">|image183|</span></a></p>
+</div></blockquote>
+</li>
+<li><dl class="first docutils">
+<dt>Select whether you would like to open the file or save it to your</dt>
+<dd><p class="first last">hard drive, then click <strong>OK</strong>.</p>
+</dd>
+</dl>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="section" id="the-jobs-tab">
+<h2>The Jobs Tab<a class="headerlink" href="#the-jobs-tab" title="Permalink to this headline">¶</a></h2>
+<p>The Jobs tab allows you to review analyses you have run previously.</p>
+<p><a href="#id191"><span class="problematic" id="id192">|image184|</span></a></p>
+<p>Each advanced workflow analysis that you have run in the past seven days
+is logged in the Jobs tab in a spreadsheet format.</p>
+<p>The columns of information in the Jobs tab are described below:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="8%" />
+<col width="92%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Column</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Name</td>
+<td><p class="first">The name of the analysis run. The format of the name is as follows:</p>
+<p class="last"><a href="#id193"><span class="problematic" id="id194">|image185|</span></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td>Status</td>
+<td><p class="first">The status of the analysis. Statuses are explained below:</p>
+<ul class="last simple">
+<li><strong>Completed</strong> – The job has finished and a visualization or analysis is available.</li>
+<li><strong>Started</strong> – The job has been started and is still processing.</li>
+<li><strong>Uploading File</strong> – You have selected to load additional data into your visualization, and the data is still in the process of uploading to tranSMART.</li>
+<li><strong>Error</strong> – The job did not complete due to an error.</li>
+<li><strong>Cancelled</strong> – The job was cancelled and will not complete.</li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td>Run Time</td>
+<td>The time the analysis took to process.</td>
+</tr>
+<tr class="row-odd"><td>Started On</td>
+<td>The date and time that the analysis was started.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Click the <strong>Refresh</strong> button to view any changes that have been made since the Jobs tab initially populated.</p>
+</div>
+<div class="section" id="viewing-a-logged-job">
+<h3>Viewing a Logged Job<a class="headerlink" href="#viewing-a-logged-job" title="Permalink to this headline">¶</a></h3>
+<p>Each advanced analysis that you have run in the previous seven days will
+be logged in the <strong>Jobs</strong> tab. You may view the visualization or
+analysis again by selecting it from the list.</p>
+<ol class="arabic">
+<li><p class="first">To run a logged advanced workflow:</p>
+</li>
+<li><p class="first">Run tranSMART, then click the <strong>Dataset Explorer</strong> tab.</p>
+</li>
+<li><p class="first">In the right pane, click the <strong>Jobs</strong> tab:</p>
+<blockquote>
+<div><p><a href="#id195"><span class="problematic" id="id196">|image187|</span></a></p>
+</div></blockquote>
+</li>
+<li><p class="first">Click the hyperlink of the analysis you are interested in viewing:</p>
+<blockquote>
+<div><p><a href="#id197"><span class="problematic" id="id198">|image188|</span></a></p>
+</div></blockquote>
+</li>
+</ol>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Dataset Explorer</a><ul>
+<li><a class="reference internal" href="#overview-of-the-ui">Overview of the UI</a></li>
+<li><a class="reference internal" href="#using-dataset-explorer">Using Dataset Explorer</a><ul>
+<li><a class="reference internal" href="#public-and-private-studies">Public and Private Studies</a></li>
+<li><a class="reference internal" href="#selecting-the-study">Selecting the Study</a><ul>
+<li><a class="reference internal" href="#search-terms-tab">Search Terms Tab</a><ul>
+<li><a class="reference internal" href="#selecting-and-opening-a-study-in-a-search-result">Selecting and Opening a Study in a Search Result</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#navigate-terms-tab">Navigate Terms Tab</a></li>
+<li><a class="reference internal" href="#branches-and-leaves-of-the-navigation-tree">Branches and Leaves of the Navigation Tree</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#populating-the-study-groups">Populating the Study Groups</a><ul>
+<li><a class="reference internal" href="#selecting-criteria-for-the-study-groups">Selecting Criteria for the Study Groups</a><ul>
+<li><a class="reference internal" href="#visual-aids-to-help-you-select-the-criteria">Visual Aids to Help You Select the Criteria</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#specifying-a-numeric-value">Specifying a Numeric Value</a><ul>
+<li><a class="reference internal" href="#viewing-the-numeric-values-associated-with-a-concept">Viewing the Numeric Values Associated with a Concept</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#saving-comparison-definitions">Saving Comparison Definitions</a></li>
+<li><a class="reference internal" href="#joining-multiple-criteria-for-a-subset-definition">Joining Multiple Criteria for a Subset Definition</a></li>
+<li><a class="reference internal" href="#modifying-or-deleting-criteria">Modifying or Deleting Criteria</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#generating-summary-statistics">Generating Summary Statistics</a><ul>
+<li><a class="reference internal" href="#significance-tests">Significance Tests</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#defining-points-of-comparison">Defining Points of Comparison</a><ul>
+<li><a class="reference internal" href="#results-of-a-comparison">Results of a Comparison</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#printing-or-saving-the-contents-of-the-results-analysis-view">Printing or Saving the Contents of the Results/Analysis View</a></li>
+<li><a class="reference internal" href="#copying-individual-charts-in-the-results-analysis-view">Copying Individual Charts in the Results/Analysis View</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#viewing-a-study">Viewing a Study</a></li>
+<li><a class="reference internal" href="#exporting-dataset-explorer-findings">Exporting Dataset Explorer Findings</a></li>
+<li><a class="reference internal" href="#generating-advanced-analyses-and-visualizations">Generating Advanced Analyses and Visualizations</a><ul>
+<li><a class="reference internal" href="#generating-heatmaps">Generating Heatmaps</a><ul>
+<li><a class="reference internal" href="#standard-heatmap">Standard Heatmap</a></li>
+<li><a class="reference internal" href="#hierarchical-clustering">Hierarchical Clustering</a></li>
+<li><a class="reference internal" href="#k-means-clustering">K-Means Clustering</a></li>
+<li><a class="reference internal" href="#marker-selection">Marker Selection</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#generating-advanced-analyses">Generating Advanced Analyses</a><ul>
+<li><a class="reference internal" href="#box-plot-with-anova">Box Plot with ANOVA</a></li>
+<li><a class="reference internal" href="#principal-component-analysis">Principal Component Analysis</a></li>
+<li><a class="reference internal" href="#scatter-plot-with-linear-regression">Scatter Plot with Linear Regression</a></li>
+<li><a class="reference internal" href="#survival-analysis">Survival Analysis</a></li>
+<li><a class="reference internal" href="#table-with-fisher-test-analysis">Table with Fisher Test Analysis</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#data-binning">Data Binning</a><ul>
+<li><a class="reference internal" href="#data-binning-using-box-plot-with-anova">Data Binning Using Box Plot with ANOVA</a></li>
+<li><a class="reference internal" href="#data-binning-using-survival-analysis">Data Binning Using Survival Analysis</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#high-dimensional-data">High Dimensional Data</a></li>
+<li><a class="reference internal" href="#other-features">Other Features</a><ul>
+<li><a class="reference internal" href="#save-to-pdf">Save to PDF</a></li>
+<li><a class="reference internal" href="#download-raw-r-data">Download Raw R Data</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#the-jobs-tab">The Jobs Tab</a><ul>
+<li><a class="reference internal" href="#viewing-a-logged-job">Viewing a Logged Job</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="search.html" title="previous chapter">Search Tool</a></li>
+      <li>Next: <a href="gene-signatures.html" title="next chapter">Gene Signatures and Gene Lists</a></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/maincontent/dataset-explorer.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2016, Paul Agapow.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.4.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+      |
+      <a href="../_sources/maincontent/dataset-explorer.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

@@ -1,0 +1,519 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Gene Signatures and Gene Lists &mdash; tranSMART User Guide 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="tranSMART User Guide 0.1 documentation" href="../index.html" />
+    <link rel="next" title="Other Tasks" href="other-tasks.html" />
+    <link rel="prev" title="Dataset Explorer" href="dataset-explorer.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="gene-signatures-and-gene-lists">
+<h1>Gene Signatures and Gene Lists<a class="headerlink" href="#gene-signatures-and-gene-lists" title="Permalink to this headline">¶</a></h1>
+<p>The tranSMART gene signature wizard guides you through the process of
+creating a gene signature or gene list. You specify whether the gene
+signature or list is publicly available to other tranSMART users or is
+reserved for your private use.</p>
+<p>Once you create the gene signature or list, it can be used in tranSMART
+searches to find clinical studies and experiments where the
+differentially regulated genes overlap with the genes contained in the
+gene signature or list. This will generate a set of hypotheses about
+diseases or treatments that may have similar genes deregulated, and that
+can help you develop a further set of experiments.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This chapter uses the term “gene signature” to refer to both gene signatures and gene lists.</p>
+</div>
+<div class="section" id="creating-a-gene-signature">
+<h2>Creating a Gene Signature<a class="headerlink" href="#creating-a-gene-signature" title="Permalink to this headline">¶</a></h2>
+<p>There are two basic tasks involved in creating a gene signature:</p>
+<ol class="arabic simple">
+<li></li>
+<li>Add the list of genes for the gene signature to a text file.</li>
+</ol>
+<p>Genes can be indicated by gene symbol or by their associated probe set
+ID.
+#. Use the gene signature wizard to define the information on which the</p>
+<blockquote>
+<div>gene signature is based, such as species, source of data, and test
+type, and also to import into the gene signature definition the text
+file containing the genes.</div></blockquote>
+<div class="section" id="step-1-adding-the-genes-to-a-text-file">
+<h3>Step 1. Adding the Genes to a Text File<a class="headerlink" href="#step-1-adding-the-genes-to-a-text-file" title="Permalink to this headline">¶</a></h3>
+<p>The gene signature wizard expects to import the genes for the gene
+signature from a tab-separated text file. The file must contain one, and
+possibly two, columns of information:</p>
+<ul class="simple">
+<li>First column – A list of gene symbols or probe set IDs.</li>
+<li>Optional second column – The fold change ratios associated with the
+gene symbols or probe set IDs.</li>
+</ul>
+<p>The fold change ratios can be either <strong>actual values</strong> (for example,
+12.8 or -12.8) or one of the following <strong>composite values:</strong></p>
+<ul class="simple">
+<li><strong>-1</strong>. All down-regulated gene expressions.</li>
+<li><strong>1</strong>. All up-regulated gene expressions.</li>
+<li><strong>0</strong>. No change.</li>
+</ul>
+<p>The following table shows the different ways you can specify the genes
+for your gene signature:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="37%" />
+<col width="33%" />
+<col width="30%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Contents of File</th>
+<th class="head">Format</th>
+<th class="head">Examples</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Gene symbols only</td>
+<td><em>GeneSymbol</em></td>
+<td><p class="first">TCN1</p>
+<p>IL1RN</p>
+<p>KIAA1199</p>
+<p class="last">G0S2</p>
+</td>
+</tr>
+<tr class="row-odd"><td>Gene symbols,
+actual fold change</td>
+<td><em>GeneSymbol</em>&lt;tab&gt;*ActualFC*</td>
+<td><p class="first">CXCL5 -19.19385797</p>
+<p>IL8RB -18.21493625</p>
+<p>FPR1 -17.6056338</p>
+<p class="last">FCGR3A -15.69858713</p>
+</td>
+</tr>
+<tr class="row-even"><td>Gene symbols, composite fold change</td>
+<td><em>GeneSymbol</em>&lt;tab&gt;*CompositeFC*</td>
+<td><p class="first">CXCL5 -1</p>
+<p>IL8RB -1</p>
+<p>MMP3 0</p>
+<p class="last">SOD2 1</p>
+</td>
+</tr>
+<tr class="row-odd"><td>Probe set IDs only</td>
+<td><em>ProbesetID</em></td>
+<td><p class="first">224301_x_at</p>
+<p>1398191_at</p>
+<p>Dr.2473.1.A1_at</p>
+<p class="last">A_24_P93251</p>
+</td>
+</tr>
+<tr class="row-even"><td>Probe set IDs,
+actual fold change</td>
+<td><em>ProbesetID</em>&lt;tab&gt;*ActualFC*</td>
+<td><p class="first">224301_x_at -19.19385797</p>
+<p>1398191_at -18.21493625</p>
+<p>Dr.2473.1.A1_at -17.6056338</p>
+<p class="last">A_24_P93251 -15.69858713</p>
+</td>
+</tr>
+<tr class="row-odd"><td>Probe set IDs, composite fold change</td>
+<td><em>ProbesetID</em>&lt;tab&gt;*CompositeFC*</td>
+<td><p class="first">224301_x_at -1</p>
+<p>1398191_at 0</p>
+<p>Dr.2473.1.A1_at 1</p>
+<p class="last">A_24_P93251 -1</p>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="using-transmart-to-select-genes">
+<h4>Using tranSMART to Select Genes<a class="headerlink" href="#using-transmart-to-select-genes" title="Permalink to this headline">¶</a></h4>
+<p>You can use the tranSMART Search tool to help you select the list of
+genes for your gene signature. For example, suppose you are interested
+in brain diseases, and want to create a gene signature consisting of
+genes that were strongly up-regulated in an experiment involving
+Alzheimer’s patients.</p>
+<p>You can use tranSMART to select the genes for the gene signature as
+follows:</p>
+<ol class="arabic">
+<li></li>
+<li><dl class="first docutils">
+<dt>In tranSMART, click the <strong>Search</strong> tab to display the Search</dt>
+<dd><p class="first last">window.</p>
+</dd>
+</dl>
+</li>
+<li><p class="first">Type <strong>brain</strong> in the Search field:</p>
+</li>
+</ol>
+<p><a href="#id1"><span class="problematic" id="id2">|image190|</span></a>
+#. Click <strong>Disease&gt; Brain Diseases</strong>.</p>
+<p>In a few seconds, the search result appears.
+#. Click the <strong>mRNA Analysis</strong> tab, then click the <strong>Study View</strong></p>
+<blockquote>
+<div>button:</div></blockquote>
+<p><a href="#id3"><span class="problematic" id="id4">|image191|</span></a></p>
+<p>tranSMART displays a list of all the experiments related to brain
+diseases.
+#. Scroll through the list of experiments until you find the one to use</p>
+<blockquote>
+<div>as the basis of your gene signature.</div></blockquote>
+<ol class="arabic simple">
+<li>Click the <strong>+</strong> icon (<a href="#id5"><span class="problematic" id="id6">|image192|</span></a>) to the left of the experiment name:</li>
+</ol>
+<p><a href="#id7"><span class="problematic" id="id8">|image193|</span></a></p>
+<p>A list of the analyses based on this experiment appears.
+#. Click the <strong>Excel</strong> button for the analysis that you want to use for</p>
+<blockquote>
+<div>your gene signature<strong>:</strong></div></blockquote>
+<p><a href="#id9"><span class="problematic" id="id10">|image194|</span></a></p>
+<p>This action exports the analysis information, including the gene
+expression data, to a Microsoft Excel file.
+#. Click <strong>Open</strong> in the File Download dialog.</p>
+<p>Excel starts up and displays the analysis data – for example:</p>
+<p><a href="#id11"><span class="problematic" id="id12">|image195|</span></a>
+#. Remove any rows containing genes that you do not want to include in</p>
+<blockquote>
+<div>the gene signature.</div></blockquote>
+<ol class="arabic simple">
+<li>Remove the column headings and all data from the spreadsheet except
+for the gene symbol and fold change ratio, then export the remaining
+data to a tab-separated text file using the Excel <strong>Save as type</strong>
+option <strong>Text (Tab delimited) (*.txt)</strong>.</li>
+</ol>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="step-2-creating-the-gene-signature">
+<h3>Step 2. Creating the Gene Signature<a class="headerlink" href="#step-2-creating-the-gene-signature" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li></li>
+<li>In tranSMART, click the <strong>Gene Signature/Lists</strong> tab.</li>
+<li>Click the <strong>New Signature</strong> button.</li>
+</ol>
+<p>The first page of the gene signature wizard appears:</p>
+<p><a href="#id13"><span class="problematic" id="id14">|image196|</span></a></p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Required fields on gene signature wizard pages are marked with a red asterisk (*).</p>
+</div>
+<p>You can find additional information about the gene signature wizard by
+clicking <strong>Information</strong> on any wizard page.
+#. Specify a name (required) and an optional description for your gene</p>
+<blockquote>
+<div>signature, then click Meta-Data to proceed to the next gene wizard
+page.</div></blockquote>
+<p>Gene Sig Pg.</p>
+<p>The second page of the gene signature wizard appears:</p>
+<p><a href="#id15"><span class="problematic" id="id16">|image198|</span></a>
+#. Specify values in the required fields <strong>Species</strong> and <strong>Technology</strong></p>
+<blockquote>
+<div><strong>Platform</strong>, and also in any other relevant fields, then click Next
+to proceed to the final gene signature wizard page:</div></blockquote>
+<p><a href="#id17"><span class="problematic" id="id18">|image199|</span></a></p>
+<p>Gene Sig Pg 3
+#. Specify values in the required field <strong>P-value Cutoff</strong>.
+#. In the section <strong>File Upload Information</strong>, describe the text file</p>
+<blockquote>
+<div>you created in the section <em>Step 1. Adding the Genes to a Text File</em>
+, using the required fields <strong>File Information</strong> and
+<strong>Upload File</strong>:</div></blockquote>
+<ul class="simple">
+<li>In the <strong>File schema</strong> section of <strong>File Information</strong>, select <strong>Gene
+Symbol &lt;tab&gt; Metric Indicator</strong> or <strong>Probe Set Symbol &lt;tab&gt; Metric
+Indicator</strong>, depending on the method you chose to specify the genes.</li>
+<li>In the <strong>Fold change metric</strong> section of <strong>File Information</strong>, select
+one of the following choices from the dropdown:</li>
+</ul>
+<table border="1" class="docutils">
+<colgroup>
+<col width="23%" />
+<col width="77%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Fold Change Metric Indicator</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Actual fold change</td>
+<td>The text file contains actual fold change values for each gene symbol or probe set ID.</td>
+</tr>
+<tr class="row-odd"><td>Not used</td>
+<td>The text file contains gene symbols or probe set ID only. There are no associated fold change values.</td>
+</tr>
+<tr class="row-even"><td>-1 (down), 1 (up), 0 (optional for unchanged)</td>
+<td>The fold change values are not actual values. They simply represent whether the gene expression was down-regulated (-1), up-regulated (1), or unchanged (0).</td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li>In <strong>Upload File</strong>, specify the path and name of the file that
+contains the genes to import. Use the <strong>Browse</strong> button to select the
+file from the navigation tree.</li>
+</ul>
+<ol class="arabic simple">
+<li>Specify values in any other relevant fields on this gene wizard page,
+then click <strong>Save</strong> to save the gene signature.</li>
+</ol>
+<p>The new gene signature appears in the <strong>Gene Signature List</strong> at the top
+of the Gene Signature/List view:</p>
+<p><a href="#id19"><span class="problematic" id="id20">|image200|</span></a></p>
+<div class="section" id="making-a-new-gene-signature-public">
+<h4>Making a New Gene Signature Public<a class="headerlink" href="#making-a-new-gene-signature-public" title="Permalink to this headline">¶</a></h4>
+<p>By default, a newly created gene signature is private.</p>
+<ol class="arabic">
+<li><p class="first">To make a gene signature public:</p>
+</li>
+<li><dl class="first docutils">
+<dt>In the <strong>Gene Signature List</strong>, click the <strong>Select</strong> <strong>Action</strong></dt>
+<dd><p class="first last">dropdown to the right of the gene signature you just created.</p>
+</dd>
+</dl>
+</li>
+<li><p class="first">Click <strong>Make Public</strong> in the dropdown list:</p>
+</li>
+</ol>
+<p><a href="#id21"><span class="problematic" id="id22">|image201|</span></a></p>
+<p>After you click <strong>Make Public</strong>, the value in the <strong>Public</strong> column for
+the gene signature changes from <strong>No</strong> to <strong>Yes</strong>:</p>
+<p><a href="#id23"><span class="problematic" id="id24">|image202|</span></a></p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">tranSMART users assigned the role ROLE_ADMIN have access to both public and private gene signatures.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="performing-actions-on-your-gene-signatures">
+<h2>Performing Actions on Your Gene Signatures<a class="headerlink" href="#performing-actions-on-your-gene-signatures" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>To edit or perform other actions on a gene signature in your gene
+signature list:</li>
+<li>In tranSMART, click the <strong>Gene Signature/Lists</strong> tab.</li>
+</ol>
+<p>The <strong>Gene Signature List</strong> appears, containing all the genes you have
+created:</p>
+<p><a href="#id25"><span class="problematic" id="id26">|image204|</span></a>
+#. Click the <strong>Select Action</strong> dropdown for the gene signature you are</p>
+<blockquote>
+<div>acting on. The dropdown contains all the actions you can perform on
+the gene signature:</div></blockquote>
+<table border="1" class="docutils">
+<colgroup>
+<col width="7%" />
+<col width="93%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Action</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Clone</td>
+<td><p class="first">Create an exact duplicate of the gene signature definition (<em>except</em> for the text file containing the gene symbols and fold change values), and display the definition in the gene signature wizard.</p>
+<p class="last">Cloning a gene signature helps you create a new gene signature with a similar definition to an existing one. However, it is expected you will import a different set of genes into the gene signature.</p>
+</td>
+</tr>
+<tr class="row-odd"><td>Delete</td>
+<td>Delete the gene signature.</td>
+</tr>
+<tr class="row-even"><td>Edit</td>
+<td><p class="first">Open the gene signature in the gene signature wizard for editing.</p>
+<p>The gene signature wizard displays all the information in the gene signature, including the reference to the text file containing the list of genes and fold change values. If you want to choose a different text file, click the following label:</p>
+<p><a href="#id27"><span class="problematic" id="id28">|image205|</span></a></p>
+<p class="last">To save any changes you make during editing, you must click the <strong>Save</strong> button on the third page of the wizard.</p>
+</td>
+</tr>
+<tr class="row-odd"><td>Edit Items</td>
+<td>Add, delete, or modify one or more genes in the text file containing the gene symbols and fold change values.</td>
+</tr>
+<tr class="row-even"><td>Excel Download</td>
+<td><p class="first">Generate the entire contents of the gene signature, including the information in the text file containing the gene symbols and fold change values, to a Microsoft Excel spreadsheet.</p>
+<p class="last">The gene signature definition and gene symbols/fold change values are written to separate spreadsheets.</p>
+</td>
+</tr>
+<tr class="row-odd"><td>Make Public</td>
+<td><p class="first">Make a private gene signature public.</p>
+<p><strong>Note:</strong> To make a public gene signature private, edit the gene signature and set the <strong>Public?</strong> field to <strong>No</strong> on the first page of the gene signature wizard:</p>
+<p class="last"><a href="#id29"><span class="problematic" id="id30">|image206|</span></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="performing-actions-on-other-users-signatures">
+<h2>Performing Actions on Other Users’ Signatures<a class="headerlink" href="#performing-actions-on-other-users-signatures" title="Permalink to this headline">¶</a></h2>
+<p>You can perform actions on gene signatures that other tranSMART users
+have created. The gene signatures you can access and the actions you can
+perform on them depend on the role assigned to your tranSMART user ID,
+as follows:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="29%" />
+<col width="71%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Role</th>
+<th class="head">Authorized Actions</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>ROLE_ADMIN</td>
+<td>All actions on all gene signatures, both public and private.</td>
+</tr>
+<tr class="row-odd"><td>ROLE_SPECTATOR
+ROLE_STUDY_OWNER
+ROLE_DATASET_EXPLORER_ADMIN</td>
+<td>Only <strong>Clone</strong> and <strong>Excel</strong> <strong>Download</strong>, and only on public gene signatures.</td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic">
+<li><p class="first">To edit or perform actions on a gene signature other than your own:</p>
+</li>
+<li><p class="first">In tranSMART, click the <strong>Gene Signature/Lists</strong> tab.</p>
+</li>
+<li><dl class="first docutils">
+<dt>Click <strong>Public Signatures</strong> to open the list of public gene</dt>
+<dd><p class="first last">signatures:</p>
+</dd>
+</dl>
+</li>
+</ol>
+<p><a href="#id31"><span class="problematic" id="id32">|image207|</span></a></p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">tranSMART users assigned the role ROLE_ADMIN will see <strong>Other Signatures</strong> instead of <strong>Public Signatures</strong>.</p>
+</div>
+<ol class="arabic simple">
+<li>Click the <strong>Select Action</strong> dropdown for the gene signature you want
+to act on.</li>
+<li>Select the action you want to perform on the gene signature.</li>
+</ol>
+</div>
+<div class="section" id="viewing-a-gene-signature-definition">
+<h2>Viewing a Gene Signature Definition<a class="headerlink" href="#viewing-a-gene-signature-definition" title="Permalink to this headline">¶</a></h2>
+<p>You can view the definition of a gene signature, including its list of
+genes and fold change values, for any gene signature you are authorized
+to access.</p>
+<p>To view a gene signature definition, click the <strong>Detail</strong> icon
+(<a href="#id33"><span class="problematic" id="id34">|image209|</span></a>) next to the gene signature name.</p>
+<p>The Gene Signature Detail dialog appears, containing the gene signature
+definition:</p>
+<p><a href="#id35"><span class="problematic" id="id36">|image210|</span></a></p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Gene Signatures and Gene Lists</a><ul>
+<li><a class="reference internal" href="#creating-a-gene-signature">Creating a Gene Signature</a><ul>
+<li><a class="reference internal" href="#step-1-adding-the-genes-to-a-text-file">Step 1. Adding the Genes to a Text File</a><ul>
+<li><a class="reference internal" href="#using-transmart-to-select-genes">Using tranSMART to Select Genes</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#step-2-creating-the-gene-signature">Step 2. Creating the Gene Signature</a><ul>
+<li><a class="reference internal" href="#making-a-new-gene-signature-public">Making a New Gene Signature Public</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#performing-actions-on-your-gene-signatures">Performing Actions on Your Gene Signatures</a></li>
+<li><a class="reference internal" href="#performing-actions-on-other-users-signatures">Performing Actions on Other Users’ Signatures</a></li>
+<li><a class="reference internal" href="#viewing-a-gene-signature-definition">Viewing a Gene Signature Definition</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="dataset-explorer.html" title="previous chapter">Dataset Explorer</a></li>
+      <li>Next: <a href="other-tasks.html" title="next chapter">Other Tasks</a></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/maincontent/gene-signatures.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2016, Paul Agapow.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.4.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+      |
+      <a href="../_sources/maincontent/gene-signatures.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

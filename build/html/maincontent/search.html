@@ -1,0 +1,1004 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Search Tool &mdash; tranSMART User Guide 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="tranSMART User Guide 0.1 documentation" href="../index.html" />
+    <link rel="next" title="Dataset Explorer" href="dataset-explorer.html" />
+    <link rel="prev" title="Getting Started with tranSMART" href="getting-started.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="search-tool">
+<h1>Search Tool<a class="headerlink" href="#search-tool" title="Permalink to this headline">¶</a></h1>
+<p>tranSMART provides a Google-like interface for searching across internal
+data sources as well as external data sources with a single query, based
+on one or more search filters that you define.</p>
+<div class="section" id="search-tasks">
+<h2>Search Tasks<a class="headerlink" href="#search-tasks" title="Permalink to this headline">¶</a></h2>
+<p>A search filter is the name of a biomedical concept such as a gene,
+pathway, disease, or other item of medical interest. These filter names
+are pre-defined in tranSMART. You can browse lists of these filter names
+and select the filter you want, or type part of a filter name in the
+<strong>Search</strong> field, causing tranSMART to display a list of filters that
+begin with the text you type.</p>
+<p>You can base your search on a single search filter or on a multi-filter
+search string.</p>
+<div class="section" id="defining-a-search-filter">
+<h3>Defining a Search Filter<a class="headerlink" href="#defining-a-search-filter" title="Permalink to this headline">¶</a></h3>
+<p>There are several ways to define a search filter:</p>
+<ul class="simple">
+<li>Type all or part of the filter name directly into the <strong>Search</strong>
+field.</li>
+<li>Browse all the pre-defined filters within filter categories (such as
+diseases).</li>
+<li>Use a saved search filter or search string.</li>
+</ul>
+<div class="section" id="type-the-filter-name">
+<h4>Type the Filter Name<a class="headerlink" href="#type-the-filter-name" title="Permalink to this headline">¶</a></h4>
+<p>To search the internal and external data sources for information related to a filter name:</p>
+<ol class="arabic simple">
+<li>Click the tab for the Search tool at the top of the tranSMART window.</li>
+<li>Click the search filter category to search within (for example, search only diseases, or search only genes).</li>
+</ol>
+<blockquote>
+<div><p><a href="#id1"><span class="problematic" id="id2">|image7|</span></a></p>
+<p>The search engine first filters by the filter category you select, and then filters by the name you type. To search across all filter categories, click <strong>all</strong>:</p>
+</div></blockquote>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">You can only specify one search filter in the <strong>Search</strong> field shown above. For instructions on creating a multi-filter search string, see <em>Building a Search String</em>.</p>
+</div>
+<ol class="arabic simple">
+<li>Type part or all of the filter name into the <strong>Search</strong> field.</li>
+</ol>
+<blockquote>
+<div><p>Up to 20 matches that begin with the text you type are displayed in a dropdown list below the <strong>Search</strong> field. For example, the following list appears for the search filter <strong>bra</strong> when searching across all filter categories:</p>
+<p><a href="#id3"><span class="problematic" id="id4">|image9|</span></a></p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">You can also search for aliases. For example, to find the gene PTK7, you can type part or all of the name PTK7 or its alias, CCK4.</p>
+</div>
+</div></blockquote>
+<ol class="arabic simple">
+<li>Do one of the following:</li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li>If the name of the filter you want appears in the list, click the
+filter name. The search begins immediately.</li>
+<li>If the filter name you want does not appear in the list, type a more
+complete name in the <strong>Search</strong> field. For example, if you typed only
+<strong>br</strong> in the <strong>Search</strong> field, no entries for “brain diseases”
+appear in the list. Typing an <strong>a</strong> after the text you already typed
+displays a list like the one shown above.</li>
+<li>If no list appears after you type a complete filter name, click the
+<strong>Search</strong> button.</li>
+</ul>
+</div></blockquote>
+<ol class="arabic">
+<li><p class="first">To start another search using a new search filter, click <strong>clear all</strong> above the search result:</p>
+<p><a href="#id5"><span class="problematic" id="id6">|image11|</span></a></p>
+</li>
+</ol>
+<p>Alternatively, you can click the tranSMART logo, or simply type a new
+filter in the <strong>Search</strong> field.</p>
+<p>See <a class="reference external" href="#Working_With_Search_Results">*Working with Search Results*</a>  for information on viewing and refining search results.</p>
+</div>
+<div class="section" id="browse-for-a-filter-name">
+<h4>Browse for a Filter Name<a class="headerlink" href="#browse-for-a-filter-name" title="Permalink to this headline">¶</a></h4>
+<p>You can browse through all the pre-defined filters in each of the
+following areas:</p>
+<ul class="simple">
+<li>Disease</li>
+<li>Gene Signature/Lists</li>
+<li>Geo/ebi</li>
+<li>Pathway</li>
+</ul>
+<p>To browse the pre-defined filters:</p>
+<ol class="arabic">
+<li><dl class="first docutils">
+<dt>Click the tab for the Search tool at the top of the tranSMART</dt>
+<dd><p class="first last">window.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Click the <strong>browse</strong> link to the right of the <strong>Search</strong> button. A</dt>
+<dd><blockquote class="first">
+<div><p>window similar to the following appears:</p>
+</div></blockquote>
+<p><a href="#id7"><span class="problematic" id="id8">|image12|</span></a></p>
+<div class="last admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The search engine ignores any filter category you may have    selected and any filter text you may have entered in the <strong>Search</strong> field.</p>
+</div>
+</dd>
+</dl>
+</li>
+<li><p class="first">Click the tab for the area in which you want to browse for filters.</p>
+</li>
+<li><p class="first">To initiate a search for information related to a filter, click the
+filter name or the green arrow (<a href="#id9"><span class="problematic" id="id10">|image14|</span></a>) after the name.</p>
+<p>After you click a filter, the search begins immediately.</p>
+</li>
+<li><p class="first">To browse for another filter, click <strong>browse</strong> again. There is no
+need to clear the previous result.</p>
+</li>
+<li><p class="first">To start another search using a new search filter, click <strong>clear
+all</strong> above the search result:</p>
+<p><a href="#id11"><span class="problematic" id="id12">|image15|</span></a></p>
+</li>
+</ol>
+<p>Alternatively, you can click the tranSMART logo, or simply type a new
+filter in the <strong>Search</strong> field.</p>
+<p>See <a class="reference external" href="#Working_With_Search_Results">*Working with Search Results*</a> on
+page <a class="reference external" href="#Working_With_Search_Results">16</a> for information on viewing
+and refining search results.</p>
+</div>
+<div class="section" id="use-a-saved-search-filter">
+<h4>Use a Saved Search Filter<a class="headerlink" href="#use-a-saved-search-filter" title="Permalink to this headline">¶</a></h4>
+<p>There are two ways to access a saved search filter:</p>
+<ul class="simple">
+<li>Retrieve the saved filter from a list of filters that you created and
+saved. The instructions in this section describe this method.</li>
+<li>Click a link to a saved filter that someone else has created, saved,
+and emailed to you.</li>
+</ul>
+<p>See <em>Saving a Search Filter or Search String</em> for more information, including instructions on saving search filters and search strings.</p>
+<p>To search against a filter that you created and saved:</p>
+<ol class="arabic">
+<li><dl class="first docutils">
+<dt>Click the tab for the Search tool at the top of the tranSMART</dt>
+<dd><p class="first last">window.</p>
+</dd>
+</dl>
+</li>
+<li><p class="first">Click the <strong>saved filters</strong> link to the right of the <strong>Search</strong></p>
+</li>
+</ol>
+<blockquote>
+<div><p>button. A list of filters that you created and saved appears:</p>
+<p><a href="#id13"><span class="problematic" id="id14">|image16|</span></a></p>
+</div></blockquote>
+<ol class="arabic simple">
+<li>To search against a saved filter in the list, click the <strong>select</strong>
+link to the right of the saved filter name. The search begins
+immediately.</li>
+<li>To start another search using a new search filter, click <strong>clear</strong>
+<strong>all</strong> above the search result.</li>
+</ol>
+<p>Alternatively, you can click the tranSMART logo, or simply type a new
+filter in the <strong>Search</strong> field.</p>
+<p>See <em>Working with Search Results</em>  for information on viewing
+and refining search results.</p>
+</div>
+</div>
+<div class="section" id="building-a-search-string">
+<h3>Building a Search String<a class="headerlink" href="#building-a-search-string" title="Permalink to this headline">¶</a></h3>
+<p>You can make the scope of your search more precise by building a
+multi-filter search string. The filters in a search string are joined by
+the logical operators AND and OR.</p>
+<div class="section" id="rules-for-building-a-search-string">
+<h4>Rules for Building a Search String<a class="headerlink" href="#rules-for-building-a-search-string" title="Permalink to this headline">¶</a></h4>
+<p>The following rules apply to building a multi-filter search string:</p>
+<ul class="simple">
+<li>Filters within the same filter category (such as diseases or genes)
+are joined by the logical operator OR.</li>
+</ul>
+<p>For example, if you add the filters Diseases&gt; Melanoma and Diseases&gt;
+Melanoma, Experimental to a search string, the search engine evaluates
+them as in the following expression:</p>
+<blockquote>
+<div>(Diseases&gt; Melanoma <strong>OR</strong> Diseases&gt; Melanoma, Experimental)</div></blockquote>
+<ul class="simple">
+<li>Filters within different filter categories are joined by the logical
+operator AND.</li>
+</ul>
+<p>For example, if you add the filters Diseases&gt; Anemia, Diseases&gt; Anemia,
+Hemolytic, and Gene&gt; HBB to a search string, the search engine evaluates
+them as in the following expression:</p>
+<blockquote>
+<div>(Diseases&gt; Anemia <strong>OR</strong> Diseases&gt; Anemia, Hemolytic) <strong>AND</strong> Gene&gt;
+HBB</div></blockquote>
+<ul class="simple">
+<li>Filters that are not among the pre-defined filters are assigned to
+the filter category <strong>Text&gt;</strong>.</li>
+</ul>
+</div>
+<div class="section" id="instructions-for-building-a-search-string">
+<h4>Instructions for Building a Search String<a class="headerlink" href="#instructions-for-building-a-search-string" title="Permalink to this headline">¶</a></h4>
+<ol class="arabic">
+<li><p class="first">To build a multi-filter search string:</p>
+</li>
+<li><dl class="first docutils">
+<dt>Define a search filter using any of the methods described in</dt>
+<dd><p class="first last"><em>Defining a Search Filter</em> .</p>
+</dd>
+</dl>
+</li>
+<li><p class="first">When the results window appears, click <strong>advanced</strong>:</p>
+<blockquote>
+<div><p><a href="#id15"><span class="problematic" id="id16">|image17|</span></a></p>
+</div></blockquote>
+</li>
+</ol>
+<p>The Edit Filters dialog appears, displaying the filter you just created:</p>
+<blockquote>
+<div><a href="#id17"><span class="problematic" id="id18">|image18|</span></a></div></blockquote>
+<ol class="arabic simple">
+<li>To add another filter, type part or all of a filter name into the
+<strong>Search</strong> field.</li>
+</ol>
+<p>Up to 20 matches for the text you type are displayed in a dropdown list
+below the <strong>Search</strong> field. For example, the following list appears for
+the search filter <strong>dis</strong>:</p>
+<p><a href="#id19"><span class="problematic" id="id20">|image19|</span></a></p>
+<p>Do one of the following:</p>
+<ul class="simple">
+<li>If the name of the filter you want appears in the list, click the
+filter name. The tranSMART software inserts the filter into the
+<strong>Filters Box</strong>.</li>
+<li>If the filter you want does not appear in the list, type a more
+complete name in the <strong>Search</strong> field.</li>
+<li>If no list appears after you type a complete filter name, click the
+plus-sign button ( <a href="#id21"><span class="problematic" id="id22">|image20|</span></a> ) to the right of the <strong>Search</strong> field.</li>
+</ul>
+<ol class="arabic">
+<li><p class="first">Repeat the previous step for each new filter to add to the search
+string.</p>
+</li>
+<li><p class="first">Optionally, to delete a filter from the search string, click the red
+<strong>X</strong> (<a href="#id23"><span class="problematic" id="id24">|image21|</span></a>) to the right of the filter name:</p>
+<blockquote>
+<div><p><a href="#id25"><span class="problematic" id="id26">|image22|</span></a></p>
+</div></blockquote>
+</li>
+<li><p class="first">When finished defining the search string, click <strong>Apply</strong> to begin
+the search.</p>
+</li>
+<li><p class="first">When the results window appears, you can continue editing the search
+string or save it, as follows:</p>
+</li>
+</ol>
+<ul>
+<li><p class="first">To continue editing the search string, click <strong>advanced</strong>.</p>
+</li>
+<li><p class="first">To save the search string, click <strong>save</strong>.</p>
+<p><a href="#id27"><span class="problematic" id="id28">|image23|</span></a></p>
+</li>
+</ul>
+<p>The search engine evaluates this search string as in the following
+expression:</p>
+<p>(Disease&gt; Brain Diseases <strong>OR</strong> Dementia)</p>
+<p>See <em>Saving a Search Filter or Search String</em>  for more
+information about saving search filters and search strings.</p>
+</div>
+</div>
+<div class="section" id="saving-a-search-filter-or-search-string">
+<h3>Saving a Search Filter or Search String<a class="headerlink" href="#saving-a-search-filter-or-search-string" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic">
+<li><p class="first">To save a search filter or search string:</p>
+</li>
+<li><dl class="first docutils">
+<dt>After defining the search filter or search string, run the search</dt>
+<dd><p class="first last">and click <strong>save</strong> in the results window.</p>
+</dd>
+</dl>
+</li>
+</ol>
+<p>The Create Filter window appears:</p>
+<p><a href="#id29"><span class="problematic" id="id30">|image24|</span></a>
+#. In the <strong>Name</strong> field, type a name for the search filter or search</p>
+<blockquote>
+<div>string.</div></blockquote>
+<ol class="arabic simple">
+<li>Optionally, in the <strong>Description</strong> field, type a description of the
+search filter or search string. In the saved filters list, the
+description appears immediately below the name of the search filter
+or search string.</li>
+<li>Check the <strong>Private</strong> <strong>Flag</strong> checkbox to prevent others from using
+this search filter or search string, or clear the checkbox to allow
+others to use the search filter or search string.</li>
+</ol>
+<p>If a filter is public, a shortcut (link) to the filter is displayed in
+the <strong>saved filters</strong> list, and an <strong>email</strong> link is provided, allowing
+you to email the shortcut to others. If a filter is private, the saved
+filter is marked “Private,” and the filter shortcut and <strong>email</strong> link
+are not displayed.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Only the person who created and saved a search filter can see that filter in the saved filter list. To let a colleague use a search filter you saved, you must (1) mark the filter as Public, and (2) click the <strong>email</strong> link to send the shortcut for the search filter to the colleague.</p>
+</div>
+<p>In the following <strong>Saved Filters</strong> list, the first two entries are
+private and the third is public:</p>
+<p><a href="#id31"><span class="problematic" id="id32">|image26|</span></a>
+#. When finished, click <strong>Create</strong> to save the new search filter or</p>
+<blockquote>
+<div>search string, or click <strong>Cancel</strong> to abandon it.</div></blockquote>
+<div class="section" id="editing-and-deleting-saved-filters">
+<h4>Editing and Deleting Saved Filters<a class="headerlink" href="#editing-and-deleting-saved-filters" title="Permalink to this headline">¶</a></h4>
+<p>To edit a saved filter:</p>
+<ol class="arabic">
+<li><dl class="first docutils">
+<dt>Click the tab for the Search tool at the top of the tranSMART</dt>
+<dd><p class="first last">window.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Click the <strong>saved filters</strong> link to the right of the <strong>Search</strong></dt>
+<dd><p class="first last">button. A list of your saved search filters appears.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Click the <strong>edit</strong> link to the right of the saved filter name. The</dt>
+<dd><blockquote class="first">
+<div><p>Edit Filter window appears:</p>
+</div></blockquote>
+<p class="last"><a href="#id33"><span class="problematic" id="id34">|image27|</span></a></p>
+</dd>
+</dl>
+</li>
+<li><p class="first">Make one or more of the following changes:</p>
+</li>
+</ol>
+<ul class="simple">
+<li>In the <strong>Name</strong> field, modify the name of the saved filter.</li>
+<li>In the <strong>Description</strong> field, add or modify an optional description
+of the saved filter. In the <strong>saved filters</strong> list, the description
+appears immediately below the saved filter name.</li>
+<li>Check the <strong>Private Flag</strong> checkbox to prevent others from using this
+saved filter, or clear the checkbox to allow others to use the saved
+filter.</li>
+</ul>
+<p>Another user can use a filter you created and saved only (1) if the
+filter is public, and (2) you email the user the shortcut (link) to the
+filter.</p>
+<ul class="simple">
+<li>To delete the filter you are editing, click the <strong>Delete</strong> button
+(<a href="#id35"><span class="problematic" id="id36">|image28|</span></a>).</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">These are the only changes you can make to a saved filter. To make changes to the filter itself, run the search against the filter, then click <strong>advanced</strong> to define a new search filter based on the existing one. For details, see Instructions for <em>Building a Search String</em> .</p>
+</div>
+<ol class="arabic">
+<li><p class="first">When finished making changes, click the <strong>Update</strong> button to save
+your changes, or click the <strong>Cancel</strong> button to abandon them.</p>
+</li>
+<li><p class="first">To delete a saved filter from the saved filters list:</p>
+</li>
+<li><dl class="first docutils">
+<dt>Click the tab for the Search tool at the top of the tranSMART</dt>
+<dd><p class="first last">window.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Click the <strong>saved filters</strong> link to the right of the <strong>Search</strong></dt>
+<dd><p class="first last">button. A list of saved search filters appears.</p>
+</dd>
+</dl>
+</li>
+<li><p class="first">Click the <strong>delete</strong> link to the right of the saved filter name.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="section" id="working-with-search-results">
+<h3>Working with Search Results<a class="headerlink" href="#working-with-search-results" title="Permalink to this headline">¶</a></h3>
+<p>The results window displays all the clinical, documentary, and other
+information found in the data warehouse that relates to the search
+filter or search string.</p>
+<p>The content of the results window varies, depending on the result
+category you select (for example, Clinical Trials or mRNA Analysis) and
+the type of view you want to use to display the results (for example,
+Heatmap or Study View). Some result categories also let you further
+refine the results by adding more filters to the search.</p>
+<p>To select a result category to view, click the tab that contains the
+result category name.</p>
+<p>The following figure shows the sections of the results window:</p>
+<p><a href="#id37"><span class="problematic" id="id38">|image30|</span></a></p>
+<p>The tabs for the result categories Clinical Trials and mRNA Analysis
+display pairs of numbers. These numbers represent the following results:</p>
+<ul class="simple">
+<li><strong>Clinical Trials ( x, y )</strong><ul>
+<li>x = the number of statistically significant analyses. These hits
+can be viewed in the Analysis View.</li>
+<li>y = the total number of analyses. These hits can be viewed in the
+Study View.</li>
+</ul>
+</li>
+</ul>
+<p>For example, in the preceding figure, 1 statistically significant
+analysis was returned, and a total of 45 analyses were returned.</p>
+<ul class="simple">
+<li><strong>mRNA Analysis (x, y)</strong><ul>
+<li>x = the number of statistically significant analyses. These hits
+can be viewed in the Analysis View.</li>
+<li>y = the total number of analyses. These hits can be viewed in the
+Study View.</li>
+</ul>
+</li>
+</ul>
+<p>For example, in the preceding figure, 1 statistically significant
+analysis was returned, and a total of 3 analyses were returned.</p>
+<p>A <em>statistically significant analysis</em> is one in which the genes in a
+gene signature, gene list, or pathway are differentially modulated in a
+statistically significant way, indicating that the associated target or
+pathway is probably affected by the treatment, disease or other topic
+examined in the study.</p>
+<p>To qualify as a statistically significant analysis, certain data points
+(such as p-value) must be evaluated and attain an aggregate score that
+meets or exceeds a particular threshold, based on an internal algorithm.
+For information on the rules that determine how analysis results are
+ranked, see <em>TEA Analyses</em> .</p>
+<p>The following sections describe the views and operations available for
+each result category:</p>
+<ul class="simple">
+<li><em>Clinical Trials Tab</em> (Page 17)</li>
+<li><em>mRNA Analysis Tab</em> (page 18)</li>
+<li><em>Literature Tab</em> (page 23)</li>
+<li><em>Documents Tab</em> (page 23)</li>
+</ul>
+<div class="section" id="clinical-trials-tab">
+<h4>Clinical Trials Tab<a class="headerlink" href="#clinical-trials-tab" title="Permalink to this headline">¶</a></h4>
+<p>This result category contains data from internal clinical trials.</p>
+<p>Click the <strong>Clinical Trials</strong> tab to display the results in this
+category. The buttons in the following figure appear at the top of the
+results list. You may see fewer buttons, depending on the results of
+your particular search:</p>
+<p><a href="#id39"><span class="problematic" id="id40">|image31|</span></a></p>
+<p>These buttons give you access to the following views and operations:</p>
+<ul class="simple">
+<li><strong>Show Filters</strong> – Define additional filters to further refine the
+search results.</li>
+<li><strong>Heatmap</strong> – View the results as a heat map.</li>
+<li><strong>Analysis View</strong> – View a list of the statistically significant
+analyses of the clinical trials.</li>
+</ul>
+<p>Results are sorted from the highest-scoring analysis down to the lowest.</p>
+<ul class="simple">
+<li><strong>Study View</strong> – View a list of the clinical trials and, optionally,
+<em>all</em> the analyses for each clinical trial – that is, those analyses
+that are considered statistically significant and those that are not.</li>
+</ul>
+<p>Results are sorted from the clinical trial with the most matches with
+the search filter or search string, down to the one with the least
+matches.</p>
+<ul class="simple">
+<li><strong>Export Results</strong> – Export descriptions of each clinical trial, and
+also all the analysis data from each of the clinical trials, to a
+Microsoft Excel file. All clinical trial descriptions are written to
+one worksheet in the file, and all analysis data is written to a
+second worksheet in the file.</li>
+</ul>
+</div>
+<div class="section" id="mrna-analysis-tab">
+<h4>mRNA Analysis Tab<a class="headerlink" href="#mrna-analysis-tab" title="Permalink to this headline">¶</a></h4>
+<p>The mRNA Analysis tab contains gene expression data derived largely from
+external experiments and from some internal experiments.</p>
+<p>Click the <strong>mRNA Analysis</strong> tab to display the results in this category.
+The buttons in the following figure appear at the top of the results
+list. You may see fewer buttons, depending on the results of your
+particular search:</p>
+<p><a href="#id41"><span class="problematic" id="id42">|image32|</span></a></p>
+<p>These buttons give you access to the following views and operations:</p>
+<ul class="simple">
+<li><strong>Show Filters</strong> – Define additional filters to further refine the
+search results.</li>
+<li><strong>Analysis View</strong> – View the analyses of the experiments that are
+ranked as statistically significant analyses.</li>
+<li><strong>Study View</strong> – View the details of the experiments and, optionally,
+<em>all</em> the analyses for each experiment – that is, those analyses that
+are considered statistically significant and those that are not.</li>
+<li><strong>Export Results</strong> – Export descriptions of each experiment, and also
+all the analysis data from each of the experiments, to a Microsoft
+Excel file. All descriptions of experiments are written to one
+worksheet in the file, and all analysis data is written to a second
+worksheet in the file.</li>
+</ul>
+<p>The following sections describe the results of experiments for the
+disease<strong>Brain Diseases</strong>. Click the <strong>mRNA Analysis</strong> tab to see the
+results.</p>
+<div class="section" id="show-filters">
+<h5>Show Filters<a class="headerlink" href="#show-filters" title="Permalink to this headline">¶</a></h5>
+<p>Click the <strong>Show Filters</strong> button to further refine the search results.
+When you click the button, a window containing filter fields appears
+(shown below), and the <strong>Show Filters</strong> button is replaced by the <strong>Hide
+Filters</strong> button.</p>
+<p>In the figure below, filter selections are set for the broadest possible
+search.</p>
+<ol class="arabic">
+<li><p class="first">To narrow the search:</p>
+</li>
+<li><dl class="first docutils">
+<dt>Specify one or more filters – for example, specify a particular</dt>
+<dd><p class="first last">p-value to search against, and/or select a particular species from
+the dropdown list.</p>
+</dd>
+</dl>
+</li>
+<li><p class="first">Click <strong>Filter Results</strong> to start the search.</p>
+</li>
+</ol>
+<p><a href="#id43"><span class="problematic" id="id44">|image33|</span></a></p>
+</div>
+<div class="section" id="analysis-view">
+<h5>Analysis View<a class="headerlink" href="#analysis-view" title="Permalink to this headline">¶</a></h5>
+<p>Click the <strong>Analysis View</strong> button to view the statistically significant
+analyses associated with mRNA experiments.</p>
+<p>For information on the rules that determine how analysis results are
+ranked, see <em>TEA Analyses</em> .</p>
+<p><a href="#id45"><span class="problematic" id="id46">|image34|</span></a></p>
+<p>When you click the <strong>+</strong> icon (<a href="#id47"><span class="problematic" id="id48">|image35|</span></a>) to pull down the list of
+biomarkers, you see two arrows next to each biomarker name. The arrows
+have the following meanings:</p>
+<ul class="simple">
+<li>The leftmost arrow indicates whether the gene in the signature or
+list is up-regulated (up arrow) or down-regulated (down arrow).</li>
+<li>The rightmost arrow (not shown above) indicates whether the gene in
+the comparison set is up-regulated (up arrow) or down-regulated (down
+arrow).</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The leftmost arrow has meaning only for searches involving gene signatures or lists. The arrow is not shown for other searches.</p>
+</div>
+<p>Each analysis also includes the following download option:</p>
+<ul class="simple">
+<li><strong>Excel</strong> – Download detailed analysis data (such as probe set, fold
+change ratio, p‑value) to a Microsoft Excel spreadsheet.</li>
+</ul>
+</div>
+<div class="section" id="study-view">
+<h5>Study View<a class="headerlink" href="#study-view" title="Permalink to this headline">¶</a></h5>
+<p>Click the <strong>Study View</strong> button to view the mRNA experiments that are
+returned and, optionally, <em>all</em> the analyses for each experiment – that
+is, those analyses that are considered statistically significant and
+those that are not.</p>
+<p><a href="#id49"><span class="problematic" id="id50">|image37|</span></a></p>
+<ol class="arabic">
+<li><p class="first">To drill down from the list of experiments:</p>
+</li>
+<li><dl class="first docutils">
+<dt>Click the <strong>+</strong> icon (<a href="#id51"><span class="problematic" id="id52">|image38|</span></a>) to the left of the experiment</dt>
+<dd><p class="first last">name to pull down a list of all the analyses done for the
+experiment.</p>
+</dd>
+</dl>
+</li>
+</ol>
+<p>The analysis list is similar to the list of the statistically
+significant analyses in the Analysis View. However, because Study View
+includes analyses ranked as not statistically significant, TEA scores
+and the designations co-regulated and anti-regulated are not specified
+for the analyses in Study View.
+#. Click the <strong>+</strong> icon (<a href="#id53"><span class="problematic" id="id54">|image39|</span></a>) to the left of the <strong>BioMarker</strong></p>
+<blockquote>
+<div>label to pull down a list of applicable biomarkers for an analysis.
+Note that the same export options for biomarkers are available in
+Study View as in Analysis View.</div></blockquote>
+</div>
+<div class="section" id="export-results-in-analysis-view-or-study-view">
+<h5>Export Results in Analysis View or Study View<a class="headerlink" href="#export-results-in-analysis-view-or-study-view" title="Permalink to this headline">¶</a></h5>
+<p>While in either Analysis View or Study View, click the <strong>Export
+Results</strong> button to export the results data in the view to a Microsoft
+Excel spreadsheet:</p>
+<p><a href="#id55"><span class="problematic" id="id56">|image40|</span></a></p>
+<p>The Export function writes the following information to the spreadsheet:</p>
+<ul class="simple">
+<li>Descriptions of each experiment returned from the search. This is the
+same information that appears in a details box for an experiment. In
+addition, associated diseases are exported to the Excel file.</li>
+<li>Information about the analyses associated with each experiment
+returned from the search. Information includes:<ul>
+<li>Analysis information displayed in the search results – for
+example, analysis description, TEA score, the list of matching
+biomarkers, and the probe set, fold change value, p-value, and TEA
+p-value associated with each biomarker.</li>
+<li>Additional information about an analysis, such as QA criteria,
+analysis platform, descriptions of the biomarkers, biomarker type
+(such as gene expression), and associated diseases involved in the
+experiment.</li>
+</ul>
+</li>
+</ul>
+<p>All descriptions of experiments are written to one worksheet in the
+file, and all analysis data is written to a second worksheet in the
+file.</p>
+</div>
+<div class="section" id="export-information-about-a-particular-analysis">
+<h5>Export Information about a Particular Analysis<a class="headerlink" href="#export-information-about-a-particular-analysis" title="Permalink to this headline">¶</a></h5>
+<p>To export details about all the biomarkers in a particular analysis,
+click the <strong>Excel</strong> button to the right of the analysis name – for
+example:</p>
+<p><a href="#id57"><span class="problematic" id="id58">|image41|</span></a></p>
+<p>Note that the number of genes shown in parentheses after the
+<strong>BioMarkers</strong> label (16995 in the above example), which specifies the
+number of genes included in the analysis, may be less than the number of
+rows written to the spreadsheet. The Export function writes one row of
+data for each <em>probe set</em>, not each gene, and the same gene may be
+associated with multiple probe sets.</p>
+</div>
+<div class="section" id="mouse-gene-homology-in-search-results">
+<h5>Mouse Gene Homology in Search Results<a class="headerlink" href="#mouse-gene-homology-in-search-results" title="Permalink to this headline">¶</a></h5>
+<p>Searches can return experiment results involving mouse genes. If
+experiment data is collected on a human gene and the corresponding mouse
+gene, a search against a human gene may potentially return results
+containing both human and mouse gene expression experiments.</p>
+<p>For example, information on both can be found by clicking the <strong>Export
+Results</strong> button in the search results. The <strong>Organism</strong> column in the
+Excel worksheet indicates whether a particular measurement was made on a
+human gene or a mouse gene.</p>
+<p>The following figure shows part of an Excel worksheet containing the
+results of a search against the MET gene:</p>
+<p><a href="#id59"><span class="problematic" id="id60">|image42|</span></a></p>
+</div>
+<div class="section" id="additional-resources">
+<h5>Additional Resources<a class="headerlink" href="#additional-resources" title="Permalink to this headline">¶</a></h5>
+<p>An mRNA Analysis search result contains links to the following
+resources:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="12%" />
+<col width="88%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Resource Link</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><p class="first">Experiment name</p>
+<p>Example:</p>
+<p class="last"><a href="#id61"><span class="problematic" id="id62">|image43|</span></a></p>
+</td>
+<td><p class="first">View information about the experiment, including title, description, and primary investigator.</p>
+<p class="last">The display may contain links to additional information, such as NCBI GEO and ArrayExpress data.</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="first">QA criteria</p>
+<p>Example:</p>
+<p class="last"><a href="#id63"><span class="problematic" id="id64">|image44|</span></a></p>
+</td>
+<td>View key parameters of the experiment, such as p-Value and fold-change cutoffs, analysis platform, and methodology.</td>
+</tr>
+<tr class="row-even"><td><p class="first">Gene</p>
+<p>Example:</p>
+<p class="last"><a href="#id65"><span class="problematic" id="id66">|image45|</span></a></p>
+</td>
+<td><p class="first">Search the following sites for information about the gene:</p>
+<p class="last"><a href="#id67"><span class="problematic" id="id68">|image46|</span></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><a href="#id69"><span class="problematic" id="id70">|image47|</span></a></td>
+<td>Export data (such as gene, probe set, and fold-change ratio) for the matching biomarkers in a particular analysis to Microsoft Excel.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="literature-tab">
+<h4>Literature Tab<a class="headerlink" href="#literature-tab" title="Permalink to this headline">¶</a></h4>
+<p>This result category contains hits from a set of curated articles within
+a set of selected diseases.</p>
+<p>Click the <strong>Literature</strong> tab to display the results in this category.
+The following figure shows the controls that appear at the top of the
+results list.</p>
+<p>These controls give you access to the following views and operations:</p>
+<ul class="simple">
+<li><strong>Show Filters</strong> button – Define additional filters to further refine
+the search results.</li>
+<li><strong>Export Results</strong> button – Write curation data to Microsoft Excel.</li>
+<li><strong>Results for</strong> dropdown – Specify the type of literature results you
+want to see in the categories.</li>
+</ul>
+</div>
+<div class="section" id="documents-tab">
+<h4>Documents Tab<a class="headerlink" href="#documents-tab" title="Permalink to this headline">¶</a></h4>
+<p>The search results in this category are based on internal text-indexed
+document repositories.</p>
+</div>
+</div>
+</div>
+<div class="section" id="tea-analyses">
+<h2>TEA Analyses<a class="headerlink" href="#tea-analyses" title="Permalink to this headline">¶</a></h2>
+<p>Target Enrichment Analysis (TEA) measures the enrichment of a gene
+signature, gene list, or pathway in a microarray expression experiment.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">For information on how TEA scores are calculated, see <em>Appendix A: How TEA Scores Are Calculated</em> .</p>
+</div>
+<div class="section" id="tea-indicators-applied-to-individual-biomarkers">
+<h3>TEA Indicators Applied to Individual Biomarkers<a class="headerlink" href="#tea-indicators-applied-to-individual-biomarkers" title="Permalink to this headline">¶</a></h3>
+<p>The Study View of mRNA Analysis search result lists all experiments that
+satisfy the search criteria. Further, in Study View, you can list:</p>
+<ul class="simple">
+<li>All of an experiment’s analyses that satisfy the search criteria</li>
+<li>All of an analysis’ biomarkers that satisfy the search criteria</li>
+</ul>
+<p>To drill down to the matching analyses in an experiment, click the <strong>+</strong>
+icon (<a href="#id71"><span class="problematic" id="id72">|image49|</span></a>) next to the experiment name. To drill down to the
+matching biomarkers in an analysis, click the <strong>+&nbsp;</strong>icon next to the
+label <strong>BioMarkers</strong> under the analysis name.</p>
+<p>The following example shows the experiment <strong>GSE4226</strong>in Study View.
+The biomarkers for the analysis <strong>DiseaseState =&gt; Sporadic Alzheimer_s
+Disease vs Normal elderly control</strong> are displayed:</p>
+<p><a href="#id73"><span class="problematic" id="id74">|image50|</span></a></p>
+<p>Notice the rightmost column of biomarker values: <strong>TEA p-Value</strong>. These
+normalized p‑values are intermediate values in the TEA calculation. To
+be considered a statistically significant analysis, an analysis must
+have at least one matching biomarker with a TEA p-Value of less than
+0.05.</p>
+<p>The following figure shows the same experiment and analysis from the
+figure above, but in Analysis View:</p>
+<p><a href="#id75"><span class="problematic" id="id76">|image51|</span></a></p>
+<p>Statistically significant analyses are candidates for display in the
+Analysis View, after further TEA calculations are performed to determine
+whether the analysis is a <strong>significant TEA analysis</strong> or an
+<strong>insignificant TEA analysis</strong>.</p>
+</div>
+<div class="section" id="tea-indicators-applied-to-an-analysis">
+<h3>TEA Indicators Applied to an Analysis<a class="headerlink" href="#tea-indicators-applied-to-an-analysis" title="Permalink to this headline">¶</a></h3>
+<p>The TEA algorithm assigns an aggregate score to each analysis within an
+experiment. A TEA score is a binomial distribution of normalized
+p-values, calculated in the context of the following factors:</p>
+<ul class="simple">
+<li><strong>With gene signatures and gene lists</strong> – The level of co-regulation
+or anti-regulation of the genes within the gene signature or gene
+list, as compared with the experiment.</li>
+<li><strong>With pathways –</strong> The level of up-regulation or down-regulation of
+the genes within the pathway, as compared with the experiment.</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">For details on the TEA algorithm, see <em>Appendix A: How TEA Scores Are Calculated</em> .</p>
+</div>
+<p>TEA identifies experiments where the genes in the signature, list, or
+pathway are <em>differentially modulated</em>, indicating that the target is
+affected by the treatment, disease or other topic examined in the
+experiment.</p>
+<div class="section" id="what-the-tea-score-means">
+<h4>What the TEA Score Means<a class="headerlink" href="#what-the-tea-score-means" title="Permalink to this headline">¶</a></h4>
+<p>The TEA score displayed for an analysis of an experiment is not the
+actual TEA score calculated by the TEA algorithm. TEA scores are
+typically very small decimal numbers that are not easily human-readable.
+To aid users in interpreting the relative value of TEA scores, scores
+are converted to a larger number, as follows:</p>
+<p>Displayed_TEA_Score = -log(Actual_TEA_Score)</p>
+<p>The larger the displayed TEA score, the more statistically significant
+is the analysis.</p>
+<p>Typically, displayed TEA scores for statistically significant analyses
+of experiments range from 3 to 30 or 40.</p>
+<p>Analyses of experiments are grouped into the categories <strong>Significant
+TEA Analyses</strong> and <strong>Insignificant TEA Analyses</strong>, as follows:</p>
+<ul class="simple">
+<li>Significant TEA analyses have a displayed TEA score of &gt;= 2.9957.</li>
+<li>Insignificant TEA analyses have a displayed TEA score of &lt; 2.9957.</li>
+</ul>
+</div>
+<div class="section" id="what-co-anti-regulation-and-up-down-regulation-mean">
+<h4>What Co-/Anti-Regulation and Up-/Down-Regulation Mean<a class="headerlink" href="#what-co-anti-regulation-and-up-down-regulation-mean" title="Permalink to this headline">¶</a></h4>
+<p>An analysis of a statistically significant experiment returned from a
+search against a gene signature or list is designated as <em>co-regulated</em>
+or <em>anti-regulated</em>. An analysis of a statistically significant
+experiment returned from a search against a pathway is designated as
+<em>up-regulated</em> or <em>down-regulated</em>.</p>
+<p>The following table describes what these terms imply in the context of
+an analysis of a statistically significant experiment:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="11%" />
+<col width="57%" />
+<col width="32%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">&nbsp;</th>
+<th class="head">Gene Signature/List</th>
+<th class="head">Pathway</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Co-Regulated</td>
+<td><p class="first">Genes that are up-regulated in the signature or list are predominantly up-regulated in the experiment.</p>
+<p class="last">Genes that are down-regulated in the signature or list are predominantly down-regulated in the experiment.</p>
+</td>
+<td>n/a</td>
+</tr>
+<tr class="row-odd"><td>Anti-Regulated</td>
+<td><p class="first">Genes that are up-regulated in the signature or list are predominantly down-regulated in the experiment.</p>
+<p class="last">Genes that are down-regulated in the signature or list are predominantly up-regulated in the experiment.</p>
+</td>
+<td>n/a</td>
+</tr>
+<tr class="row-even"><td>Up-Regulated</td>
+<td>n/a</td>
+<td>Genes in the experiment are predominantly up-regulated.</td>
+</tr>
+<tr class="row-odd"><td><strong>Down-Regulated</strong></td>
+<td>n/a</td>
+<td>Genes in the experiment are predominantly down-regulated.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="tea-indicators-applied-to-an-individual-gene">
+<h3>TEA Indicators Applied to an Individual Gene<a class="headerlink" href="#tea-indicators-applied-to-an-individual-gene" title="Permalink to this headline">¶</a></h3>
+<p>In an analysis list, TEA indicators for a gene appear as arrows, as
+shown in the figure below. The leftmost arrow represents the gene
+expression in the gene signature or list. The rightmost arrow represents
+the gene expression in the experiment:</p>
+<p><a href="#id77"><span class="problematic" id="id78">|image53|</span></a></p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The leftmost arrow appears only for gene signatures and gene lists.</p>
+</div>
+<p>The direction of the arrows indicates the following:</p>
+<ul class="simple">
+<li><strong>Up-arrow</strong> – An upward-pointing arrow alongside a gene indicates
+that the gene is up-regulated in the gene signature/list (leftmost
+arrow) or in the experiment (rightmost arrow).</li>
+</ul>
+<p>If both arrows point in the same direction, the gene is co-regulated in
+the signature/list and the experiment. If the arrows point in opposite
+directions, the gene is anti-regulated.</p>
+<ul class="simple">
+<li><strong>Down-arrow</strong> – A downward-pointing arrow alongside a gene indicates
+that the gene is down-regulated in the gene signature/list (leftmost
+arrow) or in the experiment (rightmost arrow).</li>
+</ul>
+<p>If both arrows point in the same direction, the gene is co-regulated in
+the signature/list and the experiment. If the arrows point in opposite
+directions, the gene is anti-regulated.</p>
+<p>The relationships between TEA indicators for genes and TEA indicators
+for an experiment are as follows:</p>
+<ul class="simple">
+<li><strong>Co-regulated genes</strong> – Up- or down-regulated genes in the
+signature/list are similarly up- or down-regulated in the experiment.</li>
+<li><strong>Anti-regulated</strong> <strong>genes</strong> – Up- or down-regulated genes in the
+signature/list are conversely down- or up-regulated in the
+experiment.</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Search Tool</a><ul>
+<li><a class="reference internal" href="#search-tasks">Search Tasks</a><ul>
+<li><a class="reference internal" href="#defining-a-search-filter">Defining a Search Filter</a><ul>
+<li><a class="reference internal" href="#type-the-filter-name">Type the Filter Name</a></li>
+<li><a class="reference internal" href="#browse-for-a-filter-name">Browse for a Filter Name</a></li>
+<li><a class="reference internal" href="#use-a-saved-search-filter">Use a Saved Search Filter</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#building-a-search-string">Building a Search String</a><ul>
+<li><a class="reference internal" href="#rules-for-building-a-search-string">Rules for Building a Search String</a></li>
+<li><a class="reference internal" href="#instructions-for-building-a-search-string">Instructions for Building a Search String</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#saving-a-search-filter-or-search-string">Saving a Search Filter or Search String</a><ul>
+<li><a class="reference internal" href="#editing-and-deleting-saved-filters">Editing and Deleting Saved Filters</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#working-with-search-results">Working with Search Results</a><ul>
+<li><a class="reference internal" href="#clinical-trials-tab">Clinical Trials Tab</a></li>
+<li><a class="reference internal" href="#mrna-analysis-tab">mRNA Analysis Tab</a><ul>
+<li><a class="reference internal" href="#show-filters">Show Filters</a></li>
+<li><a class="reference internal" href="#analysis-view">Analysis View</a></li>
+<li><a class="reference internal" href="#study-view">Study View</a></li>
+<li><a class="reference internal" href="#export-results-in-analysis-view-or-study-view">Export Results in Analysis View or Study View</a></li>
+<li><a class="reference internal" href="#export-information-about-a-particular-analysis">Export Information about a Particular Analysis</a></li>
+<li><a class="reference internal" href="#mouse-gene-homology-in-search-results">Mouse Gene Homology in Search Results</a></li>
+<li><a class="reference internal" href="#additional-resources">Additional Resources</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#literature-tab">Literature Tab</a></li>
+<li><a class="reference internal" href="#documents-tab">Documents Tab</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#tea-analyses">TEA Analyses</a><ul>
+<li><a class="reference internal" href="#tea-indicators-applied-to-individual-biomarkers">TEA Indicators Applied to Individual Biomarkers</a></li>
+<li><a class="reference internal" href="#tea-indicators-applied-to-an-analysis">TEA Indicators Applied to an Analysis</a><ul>
+<li><a class="reference internal" href="#what-the-tea-score-means">What the TEA Score Means</a></li>
+<li><a class="reference internal" href="#what-co-anti-regulation-and-up-down-regulation-mean">What Co-/Anti-Regulation and Up-/Down-Regulation Mean</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#tea-indicators-applied-to-an-individual-gene">TEA Indicators Applied to an Individual Gene</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="getting-started.html" title="previous chapter">Getting Started with tranSMART</a></li>
+      <li>Next: <a href="dataset-explorer.html" title="next chapter">Dataset Explorer</a></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/maincontent/search.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2016, Paul Agapow.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.4.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+      |
+      <a href="../_sources/maincontent/search.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

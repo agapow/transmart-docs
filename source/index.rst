@@ -20,7 +20,6 @@ tranSMART User Guide
   appendices/glossary
   appendices/loading-omicsoft-data
   appendices/calculating-tea-scores
-  tmug
 
 
 

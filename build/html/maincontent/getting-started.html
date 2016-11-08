@@ -1,0 +1,310 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Getting Started with tranSMART &mdash; tranSMART User Guide 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="tranSMART User Guide 0.1 documentation" href="../index.html" />
+    <link rel="next" title="Search Tool" href="search.html" />
+    <link rel="prev" title="&lt;no title&gt;" href="../frontmatter.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="getting-started-with-transmart">
+<h1>Getting Started with tranSMART<a class="headerlink" href="#getting-started-with-transmart" title="Permalink to this headline">¶</a></h1>
+<p>The tranSMART application reflects the efforts of various informatics
+groups to integrate data from internal and external data sources within
+a single data warehouse, and to provide scientific end users the tools
+to search for, view, and analyze the data in the warehouse.</p>
+<p>The core internal data is a historical base of biomarker data from gene
+expression, RBM, and SNP experiments, including both raw and analyzed
+data.</p>
+<p>External data sources include publicly available resources such as the
+Gene Expression Omnibus repository and MeSH Ontology.</p>
+<p>The tranSMART application presents scientists with a search tool to
+query this vast ocean of disparate data through a Google-like user
+interface.</p>
+<p>As users become more sophisticated in developing patterns of search
+terms, they can save and share their efforts with fellow researchers. A
+second tool, called the Dataset Explorer, allows the properly authorized
+user to create and study cohorts of patients that have been involved in
+completed clinical research efforts. Dataset Explorer also provides the
+user with tools to compare an individual (or group) in one study against
+a person or cohort in another study.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">There may be some minor differences between the UI objects illustrated in this guide and the ones you see on your screen.</p>
+</div>
+<div class="section" id="feature-overview">
+<h2>Feature Overview<a class="headerlink" href="#feature-overview" title="Permalink to this headline">¶</a></h2>
+<p>tranSMART contains the following major features:</p>
+<ul class="simple">
+<li>Search tool</li>
+<li>Dataset Explorer</li>
+<li>Gene Signature Wizard</li>
+</ul>
+<div class="section" id="search-tool">
+<h3>Search Tool<a class="headerlink" href="#search-tool" title="Permalink to this headline">¶</a></h3>
+<p>tranSMART provides a Google-like search tool that lets you search across
+multiple data sources for information related to items of interest, such
+as biomarkers, diseases, genes, and gene signatures.</p>
+<p>The scope of a search can include clinical studies, externally conducted
+experiments, and in vivo/in vitro studies.</p>
+<p>Search tool functionality includes:</p>
+<ul class="simple">
+<li>Searching within a particular category, such as diseases, genes, or
+pathways, or searching across all categories.</li>
+<li>Building complex search criteria that let you precisely define what
+to search for.</li>
+<li>Saving search criteria for easy recall and re-execution.</li>
+<li>Emailing search criteria to colleagues.</li>
+</ul>
+<div class="section" id="search-results">
+<h4>Search Results<a class="headerlink" href="#search-results" title="Permalink to this headline">¶</a></h4>
+<p>In searches of experiments, tranSMART displays complete listings of all
+analyses related to the experiments that are found.</p>
+<p>tranSMART flags “meaningful” results in the analysis lists. Meaningful
+analyses are those where the signature genes are differentially
+modulated in a statistically significant way, indicating that the
+associated target is probably affected by the treatment, disease or
+other topic examined in the experiment.</p>
+<p>Search result functionality includes:</p>
+<ul class="simple">
+<li>Displaying details of a particular experiment by clicking the name of
+the trial or experiment in the results list.</li>
+<li>Accessing a number of gene-related sites – Entrez Gene, Entrez
+Global, GeneCards, and Google Scholar – by clicking the name of a
+gene in the results list.</li>
+<li>Viewing the technical report or protocol used for an analysis.</li>
+<li>Exporting the complete results list to a Microsoft Excel file.</li>
+<li>Exporting details of a particular study, experiment, or other result
+to a Microsoft Excel file.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="dataset-explorer">
+<h3>Dataset Explorer<a class="headerlink" href="#dataset-explorer" title="Permalink to this headline">¶</a></h3>
+<p>The Dataset Explorer, originally based on an i2b2 design, lets you
+compare two sets of study groups based on one or more points of
+comparison. You define both the criteria that populate the study groups
+and the points of comparison between the study groups.</p>
+<p>Dataset Explorer uses a standard navigation tree interface to display
+data from clinical trials, and also employs an intuitive drag-and-drop
+functionality to help you build the criteria for populating the study
+groups and to add the points of comparison.</p>
+<p>Dataset Explorer functionality includes:</p>
+<ul class="simple">
+<li>Saving the criteria used to populate the study groups.</li>
+<li>Emailing the study group criteria to colleagues.</li>
+<li>Using a heatmap to visualize the change in the expression of a
+specific protein from one sample to another.</li>
+<li>Using principal component analysis (PCA) to reduce the dimensionality
+of the dataset and to identify new, meaningful variables in the
+dataset.</li>
+<li>Performing advanced analyses and displaying results in various
+formats (scatter plot with linear regression, box plot with analysis
+of variance, etc.)</li>
+<li>Exporting a study or subset of a study to analyze in an external
+tool.</li>
+</ul>
+</div>
+<div class="section" id="gene-signature-wizard">
+<h3>Gene Signature Wizard<a class="headerlink" href="#gene-signature-wizard" title="Permalink to this headline">¶</a></h3>
+<p>tranSMART provides a wizard to help you create and define gene
+signatures and gene lists.</p>
+<p>You can use your gene signature or gene list in tranSMART searches to
+find studies where the differentially regulated genes match those in
+your gene signature or list. This can help you develop hypotheses about
+diseases or treatments that may have similar genes deregulated.</p>
+<p>Stored gene signatures can also be used in the analyses functionality of
+Dataset Explorer.</p>
+<p>Gene signature functionality includes:</p>
+<ul class="simple">
+<li>Keeping the gene signature or list private so that only you can
+access it and use it in searches, or making it publicly available to
+all tranSMART users.</li>
+<li>Cloning an existing gene signature or list – either yours or a public
+one – as the starting point for creating and defining a new gene
+signature or list.</li>
+<li>Exporting all details of a gene signature or list to a Microsoft
+Excel file.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="logging-in">
+<h2>Logging In<a class="headerlink" href="#logging-in" title="Permalink to this headline">¶</a></h2>
+<p>To log into tranSMART:</p>
+<ol class="arabic simple">
+<li>Type the address of the tranSMART software into your browser’s URL field (e.g. <code class="docutils literal"><span class="pre">http://transmart.host.com/transmart</span></code>).</li>
+<li>The login screen appears:</li>
+</ol>
+<blockquote>
+<div><a href="#id1"><span class="problematic" id="id2">|image3|</span></a></div></blockquote>
+<ol class="arabic simple">
+<li>Type your tranSMART login credentials, then click <strong>Login</strong>.</li>
+</ol>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Your tranSMART software may also be configured to login
+automatically as a guest user.</p>
+</div>
+</div>
+<div class="section" id="tools">
+<h2>Tools<a class="headerlink" href="#tools" title="Permalink to this headline">¶</a></h2>
+<p>tranSMART provides the following tools:</p>
+<ul class="simple">
+<li><strong>Search</strong> – Search across internal and external data sources for
+research data and literature related to search terms that you
+provide.</li>
+<li><strong>Dataset</strong> <strong>Explorer</strong> – View study data for subjects that you
+select, based on criteria that you specify. Also, compare data
+generated for subjects in two different study groups, based on
+criteria and points of comparison that you specify.</li>
+<li><strong>Gene</strong> <strong>Signature/Lists</strong> – View definitions of existing gene
+signatures and add new gene signature definitions.</li>
+<li><strong>Utilities</strong> – contains the following submenus:<ul>
+<li><strong>Help</strong> – Display links to the tranSMART documentation set.</li>
+<li><strong>Contact Us –</strong> Email questions, problem reports, enhancement
+requests, or any other feedback about the tranSMART application.</li>
+<li><strong>About</strong> – Displays the version of tranSMART.</li>
+</ul>
+</li>
+</ul>
+<p>Select the tranSMART tool to use by clicking one of the tool tabs at the
+top of the tranSMART window:</p>
+<p><a href="#id3"><span class="problematic" id="id4">|image5|</span></a></p>
+</div>
+<div class="section" id="opening-a-particular-tool-at-login">
+<h2>Opening a Particular Tool at Login<a class="headerlink" href="#opening-a-particular-tool-at-login" title="Permalink to this headline">¶</a></h2>
+<p>By default, tranSMART opens the Search tool after you log in. However,
+you can specify the tool for tranSMART to open immediately after login
+by including the tool name in the address you type into your browser’s
+URL field.</p>
+<p>To automatically open a particular tranSMART tool immediately after
+login, use an address listed below:</p>
+<ul class="simple">
+<li>Search tool – either of the following:</li>
+</ul>
+<blockquote>
+<div><p><a class="reference external" href="https://transmart.host.com/transmart">https://transmart.host.com/transmart</a></p>
+<p><a class="reference external" href="https://transmart.host.com/transmart/search">https://transmart.host.com/transmart/search</a></p>
+</div></blockquote>
+<ul class="simple">
+<li>Dataset Explorer tool:</li>
+</ul>
+<blockquote>
+<div><a class="reference external" href="https://transmart.host.com/transmart/datasetExplorer">https://transmart.host.com/transmart/datasetExplorer</a></div></blockquote>
+<ul class="simple">
+<li>Gene Signature/Lists tool:</li>
+</ul>
+<blockquote>
+<div><a class="reference external" href="https://transmart.host.com/transmart/geneSignature">https://transmart.host.com/transmart/geneSignature</a></div></blockquote>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The addresses above are case-sensitive. Also, this (and future examples) use the tranSMART instance address <code class="docutils literal"><span class="pre">https://transmart.host.com</span></code>. Substitute the address of your local instance.</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Getting Started with tranSMART</a><ul>
+<li><a class="reference internal" href="#feature-overview">Feature Overview</a><ul>
+<li><a class="reference internal" href="#search-tool">Search Tool</a><ul>
+<li><a class="reference internal" href="#search-results">Search Results</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#dataset-explorer">Dataset Explorer</a></li>
+<li><a class="reference internal" href="#gene-signature-wizard">Gene Signature Wizard</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#logging-in">Logging In</a></li>
+<li><a class="reference internal" href="#tools">Tools</a></li>
+<li><a class="reference internal" href="#opening-a-particular-tool-at-login">Opening a Particular Tool at Login</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="../frontmatter.html" title="previous chapter">&lt;no title&gt;</a></li>
+      <li>Next: <a href="search.html" title="next chapter">Search Tool</a></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/maincontent/getting-started.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2016, Paul Agapow.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.4.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+      |
+      <a href="../_sources/maincontent/getting-started.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
