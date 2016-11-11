@@ -55,14 +55,8 @@ censoring value
 .. TODO fix the maths symbols below
 
 chi squared
-	Let the probabilities of various classes in a distribution be
-	:math:`p_1, p_2 ... p_k`, with observed frequencies
-	:math:`m_1, m_2 ... m_k`. The quantity:
-
-	|image217|
-
-	is therefore a measure of the deviation of a sample from expectation,
-	where :math:`N_is` is the sample size.
+	A measure of the deviation of a sample from expectation.
+	See http://mathworld.wolfram.com/Chi-SquaredTest.html
 
 cohort
 	A group of subjects who have shared a specific event or characteristic.
@@ -119,8 +113,6 @@ dependent variable
 	measured.
 
 differential modulation
-	down-regulation
-
 	An analysis of a statistically significant experiment returned from a
 	search against a pathway is designated as *up-regulated* or
 	*down-regulated*.

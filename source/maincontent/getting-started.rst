@@ -158,7 +158,7 @@ To log into tranSMART:
 
 #. The login screen appears:
 
-  |image3|
+   .. image:: /media/image3
 
 #. Type your tranSMART login credentials, then click **Login**.
 
@@ -195,7 +195,8 @@ tranSMART provides the following tools:
 Select the tranSMART tool to use by clicking one of the tool tabs at the
 top of the tranSMART window:
 
-|image5|
+.. image:: /media/image5
+
 
 Opening a Particular Tool at Login
 ----------------------------------
@@ -210,16 +211,16 @@ login, use an address listed below:
 
 -  Search tool – either of the following::
 
-  https://transmart.host.com/transmart
+      https://transmart.host.com/transmart
 
-  https://transmart.host.com/transmart/search
+      https://transmart.host.com/transmart/search
 
 -  Dataset Explorer tool::
 
-  https://transmart.host.com/transmart/datasetExplorer
+      https://transmart.host.com/transmart/datasetExplorer
 
 -  Gene Signature/Lists tool::
 
-  https://transmart.host.com/transmart/geneSignature
+      https://transmart.host.com/transmart/geneSignature
 
 .. note:: The addresses above are case-sensitive. Also, this (and future examples) use the tranSMART instance address ``https://transmart.host.com``. Substitute the address of your local instance.

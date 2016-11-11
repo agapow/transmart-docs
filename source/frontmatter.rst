@@ -1,4 +1,7 @@
 
+License & rights
+================
+
 .. image:: media/image1.png
 
 

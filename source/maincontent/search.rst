@@ -40,7 +40,7 @@ To search the internal and external data sources for information related to a fi
 
 #. Click the search filter category to search within (for example, search only diseases, or search only genes).
 
-  |image7|
+  .. image:: /media/image7.png
 
   The search engine first filters by the filter category you select, and then filters by the name you type. To search across all filter categories, click **all**:
 
@@ -50,7 +50,7 @@ To search the internal and external data sources for information related to a fi
 
   Up to 20 matches that begin with the text you type are displayed in a dropdown list below the **Search** field. For example, the following list appears for the search filter **bra** when searching across all filter categories:
 
-  |image9|
+  .. image:: /media/image9.png
 
   .. note:: You can also search for aliases. For example, to find the gene PTK7, you can type part or all of the name PTK7 or its alias, CCK4.
 
@@ -70,7 +70,7 @@ To search the internal and external data sources for information related to a fi
 
 #. To start another search using a new search filter, click **clear all** above the search result:
 
-   |image11|
+   .. image:: /media/image11.png
 
 Alternatively, you can click the tranSMART logo, or simply type a new
 filter in the **Search** field.
@@ -94,18 +94,19 @@ following areas:
 To browse the pre-defined filters:
 
 #. Click the tab for the Search tool at the top of the tranSMART
-      window.
-#. Click the **browse** link to the right of the **Search** button. A
-      window similar to the following appears:
+   window.
 
-    |image12|
+#. Click the **browse** link to the right of the **Search** button. A
+   window similar to the following appears:
+
+    .. image:: /media/image12.png
 
     .. note:: The search engine ignores any filter category you may have    selected and any filter text you may have entered in the **Search** field.
 
 #. Click the tab for the area in which you want to browse for filters.
 
 #. To initiate a search for information related to a filter, click the
-   filter name or the green arrow (|image14|) after the name.
+   filter name or the green arrow (.. image:: /media/image14.png) after the name.
 
    After you click a filter, the search begins immediately.
 
@@ -115,7 +116,7 @@ To browse the pre-defined filters:
 #. To start another search using a new search filter, click **clear
    all** above the search result:
 
-   |image15|
+   .. image:: /media/image15.png
 
 Alternatively, you can click the tranSMART logo, or simply type a new
 filter in the **Search** field.
@@ -140,15 +141,17 @@ See *Saving a Search Filter or Search String* for more information, including in
 To search against a filter that you created and saved:
 
 #. Click the tab for the Search tool at the top of the tranSMART
-      window.
-#. Click the **saved filters** link to the right of the **Search**
-  button. A list of filters that you created and saved appears:
+   window.
 
-  |image16|
+#. Click the **saved filters** link to the right of the **Search**
+   button. A list of filters that you created and saved appears:
+
+  .. image:: /media/image16.png
 
 #. To search against a saved filter in the list, click the **select**
    link to the right of the saved filter name. The search begins
    immediately.
+
 #. To start another search using a new search filter, click **clear**
    **all** above the search result.
 
@@ -196,16 +199,19 @@ them as in the following expression:
 Instructions for Building a Search String
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-#. To build a multi-filter search string:
+To build a multi-filter search string:
+
 #. Define a search filter using any of the methods described in
-      *Defining a Search Filter* .
+   *Defining a Search Filter* .
+
 #. When the results window appears, click **advanced**:
 
-    |image17|
+    .. image:: /media/image17.png
 
-The Edit Filters dialog appears, displaying the filter you just created:
+    The Edit Filters dialog appears, displaying the filter you just created:
 
-    |image18|
+    .. image:: /media/image18.png
+
 #. To add another filter, type part or all of a filter name into the
    **Search** field.
 
@@ -213,7 +219,7 @@ Up to 20 matches for the text you type are displayed in a dropdown list
 below the **Search** field. For example, the following list appears for
 the search filter **dis**:
 
-|image19|
+.. image:: /media/image19.png
 
 Do one of the following:
 
@@ -225,28 +231,33 @@ Do one of the following:
    complete name in the **Search** field.
 
 -  If no list appears after you type a complete filter name, click the
-   plus-sign button ( |image20| ) to the right of the **Search** field.
+   plus-sign button ( .. image:: /media/image20.png ) to the right of
+   the **Search** field.
+
 #. Repeat the previous step for each new filter to add to the search
    string.
-#. Optionally, to delete a filter from the search string, click the red
-   **X** (|image21|) to the right of the filter name:
 
-    |image22|
+#. Optionally, to delete a filter from the search string, click the red
+   **X** (.. image:: /media/image21.png) to the right of the filter name:
+
+    .. image:: /media/image22.png
+
 #. When finished defining the search string, click **Apply** to begin
    the search.
+
 #. When the results window appears, you can continue editing the search
    string or save it, as follows:
 
--  To continue editing the search string, click **advanced**.
+   -  To continue editing the search string, click **advanced**.
 
--  To save the search string, click **save**.
+   -  To save the search string, click **save**.
 
-   |image23|
+      .. image:: /media/image23.png
 
 The search engine evaluates this search string as in the following
 expression:
 
-(Disease> Brain Diseases **OR** Dementia)
+   (Disease> Brain Diseases **OR** Dementia)
 
 See *Saving a Search Filter or Search String*  for more
 information about saving search filters and search strings.
@@ -255,34 +266,39 @@ Saving a Search Filter or Search String
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 #. To save a search filter or search string:
+
 #. After defining the search filter or search string, run the search
-      and click **save** in the results window.
+   and click **save** in the results window.
 
-The Create Filter window appears:
+   The Create Filter window appears:
 
-|image24|
+   .. image:: /media/image24.png
+
 #. In the **Name** field, type a name for the search filter or search
    string.
+
 #. Optionally, in the **Description** field, type a description of the
    search filter or search string. In the saved filters list, the
    description appears immediately below the name of the search filter
    or search string.
+
 #. Check the **Private** **Flag** checkbox to prevent others from using
    this search filter or search string, or clear the checkbox to allow
    others to use the search filter or search string.
 
-If a filter is public, a shortcut (link) to the filter is displayed in
-the **saved filters** list, and an **email** link is provided, allowing
-you to email the shortcut to others. If a filter is private, the saved
-filter is marked “Private,” and the filter shortcut and **email** link
-are not displayed.
+   If a filter is public, a shortcut (link) to the filter is displayed in
+   the **saved filters** list, and an **email** link is provided, allowing
+   you to email the shortcut to others. If a filter is private, the saved
+   filter is marked “Private,” and the filter shortcut and **email** link
+   are not displayed.
 
-.. note:: Only the person who created and saved a search filter can see that filter in the saved filter list. To let a colleague use a search filter you saved, you must (1) mark the filter as Public, and (2) click the **email** link to send the shortcut for the search filter to the colleague.
+   .. note:: Only the person who created and saved a search filter can see that filter in the saved filter list. To let a colleague use a search filter you saved, you must (1) mark the filter as Public, and (2) click the **email** link to send the shortcut for the search filter to the colleague.
 
-In the following **Saved Filters** list, the first two entries are
-private and the third is public:
+   In the following **Saved Filters** list, the first two entries are
+   private and the third is public:
 
-|image26|
+   .. image:: /media/image26.png
+
 #. When finished, click **Create** to save the new search filter or
    search string, or click **Cancel** to abandon it.
 
@@ -292,44 +308,51 @@ Editing and Deleting Saved Filters
 To edit a saved filter:
 
 #. Click the tab for the Search tool at the top of the tranSMART
-      window.
-#. Click the **saved filters** link to the right of the **Search**
-      button. A list of your saved search filters appears.
-#. Click the **edit** link to the right of the saved filter name. The
-      Edit Filter window appears:
+   window.
 
-    |image27|
+#. Click the **saved filters** link to the right of the **Search**
+   button. A list of your saved search filters appears.
+
+#. Click the **edit** link to the right of the saved filter name. The
+   Edit Filter window appears:
+
+    .. image:: /media/image27.png
+
 #. Make one or more of the following changes:
 
--  In the **Name** field, modify the name of the saved filter.
+   -  In the **Name** field, modify the name of the saved filter.
 
--  In the **Description** field, add or modify an optional description
-   of the saved filter. In the **saved filters** list, the description
-   appears immediately below the saved filter name.
+   -  In the **Description** field, add or modify an optional description
+      of the saved filter. In the **saved filters** list, the description
+      appears immediately below the saved filter name.
 
--  Check the **Private Flag** checkbox to prevent others from using this
-   saved filter, or clear the checkbox to allow others to use the saved
-   filter.
+   -  Check the **Private Flag** checkbox to prevent others from using this
+      saved filter, or clear the checkbox to allow others to use the saved
+      filter.
 
-Another user can use a filter you created and saved only (1) if the
-filter is public, and (2) you email the user the shortcut (link) to the
-filter.
+      Another user can use a filter you created and saved only (1) if the
+      filter is public, and (2) you email the user the shortcut (link) to the
+      filter.
 
--  To delete the filter you are editing, click the **Delete** button
-   (|image28|).
+   -  To delete the filter you are editing, click the **Delete** button
+      (.. image:: /media/image28.png).
 
 
-.. note:: These are the only changes you can make to a saved filter. To make changes to the filter itself, run the search against the filter, then click **advanced** to define a new search filter based on the existing one. For details, see Instructions for *Building a Search String* .
+      .. note:: These are the only changes you can make to a saved filter. To make changes to the filter itself, run the search against the filter, then click **advanced** to define a new search filter based on the existing one. For details, see Instructions for *Building a Search String* .
 
 #. When finished making changes, click the **Update** button to save
    your changes, or click the **Cancel** button to abandon them.
 
-#. To delete a saved filter from the saved filters list:
+To delete a saved filter from the saved filters list:
+
 #. Click the tab for the Search tool at the top of the tranSMART
-      window.
+   window.
+
 #. Click the **saved filters** link to the right of the **Search**
-      button. A list of saved search filters appears.
+   button. A list of saved search filters appears.
+
 #. Click the **delete** link to the right of the saved filter name.
+
 
 Working with Search Results
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -349,7 +372,7 @@ result category name.
 
 The following figure shows the sections of the results window:
 
-|image30|
+.. image:: /media/image30.png
 
 The tabs for the result categories Clinical Trials and mRNA Analysis
 display pairs of numbers. These numbers represent the following results:
@@ -411,7 +434,7 @@ category. The buttons in the following figure appear at the top of the
 results list. You may see fewer buttons, depending on the results of
 your particular search:
 
-|image31|
+.. image:: /media/image31.png
 
 These buttons give you access to the following views and operations:
 
@@ -450,7 +473,7 @@ The buttons in the following figure appear at the top of the results
 list. You may see fewer buttons, depending on the results of your
 particular search:
 
-|image32|
+.. image:: /media/image32.png
 
 These buttons give you access to the following views and operations:
 
@@ -491,7 +514,7 @@ search.
       the dropdown list.
 #. Click **Filter Results** to start the search.
 
-|image33|
+.. image:: /media/image33.png
 
 Analysis View
 '''''''''''''
@@ -502,9 +525,9 @@ analyses associated with mRNA experiments.
 For information on the rules that determine how analysis results are
 ranked, see *TEA Analyses* .
 
-|image34|
+.. image:: /media/image34.png
 
-When you click the **+** icon (|image35|) to pull down the list of
+When you click the **+** icon (.. image:: /media/image35.png) to pull down the list of
 biomarkers, you see two arrows next to each biomarker name. The arrows
 have the following meanings:
 
@@ -532,19 +555,22 @@ returned and, optionally, *all* the analyses for each experiment – that
 is, those analyses that are considered statistically significant and
 those that are not.
 
-|image37|
+.. image:: /media/image37.png
 
-#. To drill down from the list of experiments:
-#. Click the **+** icon (|image38|) to the left of the experiment
-      name to pull down a list of all the analyses done for the
-      experiment.
+To drill down from the list of experiments:
 
-The analysis list is similar to the list of the statistically
-significant analyses in the Analysis View. However, because Study View
-includes analyses ranked as not statistically significant, TEA scores
-and the designations co-regulated and anti-regulated are not specified
-for the analyses in Study View.
-#. Click the **+** icon (|image39|) to the left of the **BioMarker**
+#. Click the **+** icon (.. image:: /media/image38.png) to the left of the experiment
+   name to pull down a list of all the analyses done for the
+   experiment.
+
+   The analysis list is similar to the list of the statistically
+   significant analyses in the Analysis View. However, because Study View
+   includes analyses ranked as not statistically significant, TEA scores
+   and the designations co-regulated and anti-regulated are not specified
+   for the analyses in Study View.
+
+#. Click the **+** icon (.. image:: /media/image39.png) to the left of
+   the **BioMarker**
    label to pull down a list of applicable biomarkers for an analysis.
    Note that the same export options for biomarkers are available in
    Study View as in Analysis View.
@@ -556,7 +582,7 @@ While in either Analysis View or Study View, click the **Export
 Results** button to export the results data in the view to a Microsoft
 Excel spreadsheet:
 
-|image40|
+.. image:: /media/image40.png
 
 The Export function writes the following information to the spreadsheet:
 
@@ -588,7 +614,7 @@ To export details about all the biomarkers in a particular analysis,
 click the **Excel** button to the right of the analysis name – for
 example:
 
-|image41|
+.. image:: /media/image41.png
 
 Note that the number of genes shown in parentheses after the
 **BioMarkers** label (16995 in the above example), which specifies the
@@ -613,7 +639,7 @@ human gene or a mouse gene.
 The following figure shows part of an Excel worksheet containing the
 results of a search against the MET gene:
 
-|image42|
+.. image:: /media/image42.png
 
 Additional Resources
 ''''''''''''''''''''
@@ -621,29 +647,33 @@ Additional Resources
 An mRNA Analysis search result contains links to the following
 resources:
 
-+-------------------+-----------------------------------------------------------------------------------------------------------------------------------------+
-| Resource Link     | Description                                                                                                                             |
-+===================+=========================================================================================================================================+
-| Experiment name   | View information about the experiment, including title, description, and primary investigator.                                          |
-|                   |                                                                                                                                         |
-| Example:          | The display may contain links to additional information, such as NCBI GEO and ArrayExpress data.                                        |
-|                   |                                                                                                                                         |
-| |image43|         |                                                                                                                                         |
-+-------------------+-----------------------------------------------------------------------------------------------------------------------------------------+
-| QA criteria       | View key parameters of the experiment, such as p-Value and fold-change cutoffs, analysis platform, and methodology.                     |
-|                   |                                                                                                                                         |
-| Example:          |                                                                                                                                         |
-|                   |                                                                                                                                         |
-| |image44|         |                                                                                                                                         |
-+-------------------+-----------------------------------------------------------------------------------------------------------------------------------------+
-| Gene              | Search the following sites for information about the gene:                                                                              |
-|                   |                                                                                                                                         |
-| Example:          | |image46|                                                                                                                               |
-|                   |                                                                                                                                         |
-| |image45|         |                                                                                                                                         |
-+-------------------+-----------------------------------------------------------------------------------------------------------------------------------------+
-| |image47|         | Export data (such as gene, probe set, and fold-change ratio) for the matching biomarkers in a particular analysis to Microsoft Excel.   |
-+-------------------+-----------------------------------------------------------------------------------------------------------------------------------------+
++--------------------------------+----------------------------------------------------------------------------------------------------------------------------+
+| Resource Link                  | Description                                                                                                                |
++================================+============================================================================================================================+
+| Experiment name                | View information about the experiment, including title, description, and primary investigator.                             |
+|                                |                                                                                                                            |
+| Example                        | The display may contain links to additional information, such as NCBI GEO and ArrayExpress data.                           |
+|                                |                                                                                                                            |
+| .. image:: /media/image43.png  |                                                                                                                            |
+|                                |                                                                                                                            |
++--------------------------------+----------------------------------------------------------------------------------------------------------------------------+
+| QA criteria                    | View key parameters of the experiment, such as p-Value and fold-change cutoffs, analysis platform, and methodology.        |
+|                                |                                                                                                                            |
+| Example:                       |                                                                                                                            |
+|                                |                                                                                                                            |
+| .. image:: /media/image44.png  |                                                                                                                            |
+|                                |                                                                                                                            |
++--------------------------------+----------------------------------------------------------------------------------------------------------------------------+
+| Gene                           | Search the following sites for information about the gene:                                                                 |
+|                                |                                                                                                                            |
+| Example:                       | .. image:: /media/image46.png                                                                                              |
+|                                |                                                                                                                            |
+| .. image:: /media/image45.png  |                                                                                                                            |
+|                                |                                                                                                                            |
++--------------------------------+----------------------------------------------------------------------------------------------------------------------------+
+| .. image:: /media/image47.png  | Export data (such as gene, probe set and fold-change ratio) for the matching biomarkers in an analysis to Microsoft Excel. |
+|                                |                                                                                                                            |
++--------------------------------+----------------------------------------------------------------------------------------------------------------------------+
 
 Literature Tab
 ^^^^^^^^^^^^^^
@@ -692,7 +722,7 @@ satisfy the search criteria. Further, in Study View, you can list:
 -  All of an analysis’ biomarkers that satisfy the search criteria
 
 To drill down to the matching analyses in an experiment, click the **+**
-icon (|image49|) next to the experiment name. To drill down to the
+icon (.. image:: /media/image49.png) next to the experiment name. To drill down to the
 matching biomarkers in an analysis, click the **+ **\ icon next to the
 label **BioMarkers** under the analysis name.
 
@@ -700,7 +730,7 @@ The following example shows the experiment **GSE4226**\ in Study View.
 The biomarkers for the analysis **DiseaseState => Sporadic Alzheimer\_s
 Disease vs Normal elderly control** are displayed:
 
-|image50|
+.. image:: /media/image50.png
 
 Notice the rightmost column of biomarker values: **TEA p-Value**. These
 normalized p‑values are intermediate values in the TEA calculation. To
@@ -711,7 +741,7 @@ have at least one matching biomarker with a TEA p-Value of less than
 The following figure shows the same experiment and analysis from the
 figure above, but in Analysis View:
 
-|image51|
+.. image:: /media/image51.png
 
 Statistically significant analyses are candidates for display in the
 Analysis View, after further TEA calculations are performed to determine
@@ -801,7 +831,7 @@ shown in the figure below. The leftmost arrow represents the gene
 expression in the gene signature or list. The rightmost arrow represents
 the gene expression in the experiment:
 
-|image53|
+.. image:: /media/image53.png
 
 
 .. note:: The leftmost arrow appears only for gene signatures and gene lists.
